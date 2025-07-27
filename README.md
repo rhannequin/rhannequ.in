@@ -4,4 +4,10 @@
 
 Source code for [rhannequ.in].
 
+## Deployment
+
+```
+export $(cat .env | xargs) && bin/kamal deploy
+```
+
 [rhannequ.in]: https://rhannequ.in

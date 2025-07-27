@@ -1,279 +1,262 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Rémy Hannequin">
-  <meta name="author" content="rhannequin">
-  <%= csrf_meta_tags %>
-  <%= csp_meta_tag %>
-  <title>Rémy Hannequin &bull; Developer</title>
-  <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
-</head>
+<h1 class="text-4xl font-bold mb-4">
+  Hi, I'm Rémy.
+</h1>
 
-<body class="m-0 p-6 font-light text-lg">
-  <h1 class="text-4xl font-bold mb-4">
-    Hi, I'm Rémy.
-  </h1>
+<p class="mb-4">
+  I am a senior developer working at
+  <a
+    href="https://thoughtbot.com/"
+    class="text-blue-900 underline hover:no-underline visited:text-blue-800">
+    thoughtbot</a>.
+</p>
 
-  <p class="mb-4">
-    I am a senior developer working at
-    <a
-      href="https://thoughtbot.com/"
-      class="text-blue-900 underline hover:no-underline visited:text-blue-800">
-      thoughtbot</a>.
-  </p>
+<p class="mb-4">
+  I work on some open source and I am the creator and maintainer of
+  <a
+    href="https://github.com/rhannequin/astronoby"
+    class="text-blue-900 underline hover:no-underline visited:text-blue-800">
+    Astronoby</a>, a Ruby
+  library to compute astronomical data and events.
+</p>
 
-  <p class="mb-4">
-    I work on some open source and I am the creator and maintainer of
-    <a
-      href="https://github.com/rhannequin/astronoby"
-      class="text-blue-900 underline hover:no-underline visited:text-blue-800">
-      Astronoby</a>, a Ruby
-    library to compute astronomical data and events.
-  </p>
+<p class="mb-4">
+  You can find some of my work on:
+</p>
 
-  <p class="mb-4">
-    You can find some of my work on:
-  </p>
-
-  <ul class="list-disc mx-8 mb-4">
-    <li class="mb-3">
-      <a
-        href="https://github.com/rhannequin"
-        class="text-blue-900 underline hover:no-underline visited:text-blue-800">
-        GitHub
-      </a>
-      <ul class="list-disc mx-8">
-        <li>
-          <a
-            href="https://github.com/rhannequin/astronoby"
-            class="text-blue-900 underline hover:no-underline visited:text-blue-800">
-            Astronoby</a>:
-          Ruby gem for astronomical data and events
-        </li>
-        <li>
-          <a
-            href="https://github.com/rhannequin/ruby-ephem"
-            class="text-blue-900 underline hover:no-underline visited:text-blue-800">
-            Ephem</a>:
-          Ruby integration of NASA/JPL DE and IMCCE INPOP ephemerides
-        </li>
-      </ul>
-    </li>
-    <li class="mb-3">
-      Conferences
-      <ul class="list-disc mx-8">
-        <li>
-          <a
-            href="https://youtu.be/ZYWfiOM-zlY?si=FOnlZMfqangTIIR8"
-            class="text-blue-900 underline hover:no-underline visited:text-blue-800">
-            Modelling the Cosmos in Ruby
-          </a>
-          at Helvetic Ruby 2025
-        </li>
-      </ul>
-    </li>
-    <li class="mb-3">
-      Meet-up presentations
-      <ul class="list-disc mx-8">
-        <li>Ruby Numeric Types at Paris.rb</li>
-        <li>
-          <a
-            href="https://www.youtube.com/watch?v=QyGnBrtopCo"
-            class="text-blue-900 underline hover:no-underline visited:text-blue-800">
-            Value Objects
-          </a>
-          at Paris.rb
-        </li>
-      </ul>
-    </li>
-    <li class="mb-3">
-      <a
-        href="https://thoughtbot.com/blog/authors/remy-hannequin"
-        class="text-blue-900 underline hover:no-underline visited:text-blue-800">
-        thoughtbot blog
-      </a>
-      <ul class="list-disc mx-8">
-        <li>
-          <a
-            href="https://thoughtbot.com/blog/between-immutability-and-memoization-you-might-have-to-choose"
-            class="text-blue-900 underline hover:no-underline visited:text-blue-800">
-            Between immutability and memoization, you might have to choose
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://thoughtbot.com/blog/numeric-data-types-in-ruby-and-when-to-use-them"
-            class="text-blue-900 underline hover:no-underline visited:text-blue-800">
-            Numeric data types in Ruby and when to use them
-          </a>
-        </li>
-        <li>
-          <em>
-            <a
-              href="https://thoughtbot.com/blog/get-consistent-data-from-your-llm-with-json-schema"
-              class="text-blue-900 underline hover:no-underline visited:text-blue-800">
-              Get consistent data from your LLM with JSON Schema
-            </a>
-          </em>
-        </li>
-        <li>
-          <a
-            href="https://thoughtbot.com/blog/a-journey-towards-better-testing-practices"
-            class="text-blue-900 underline hover:no-underline visited:text-blue-800">
-            A journey towards better testing practices
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://thoughtbot.com/blog/set-up-detox-for-end-to-end-testing-in-your-react-native-app"
-            class="text-blue-900 underline hover:no-underline visited:text-blue-800">
-            Set up Detox for end-to-end testing in your React Native App
-          </a>
-        </li>
-        <li>
-          <em>
-            <a
-              href="https://thoughtbot.com/blog/i-have-a-bad-english-accent"
-              class="text-blue-900 underline hover:no-underline visited:text-blue-800">
-              “I have a bad English accent.”
-            </a>
-          </em>
-        </li>
-      </ul>
-    </li>
-    <li class="mb-3">
-      <a
-        href="https://dev.to/rhannequin"
-        class="text-blue-900 underline hover:no-underline visited:text-blue-800">
-        Personal blog
-      </a>
-      <ul class="list-disc mx-8">
-        <li>
-          <a
-            href="https://dev.to/rhannequin/where-on-earth-do-shadows-disappear-finding-the-sub-solar-point-with-ruby-5hm"
-            class="text-blue-900 underline hover:no-underline visited:text-blue-800">
-            Where on Earth do shadows disappear? Finding the sub-solar point with Ruby
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://dev.to/rhannequin/astronoby-v070-planets-and-ephemerides-85b"
-            class="text-blue-900 underline hover:no-underline visited:text-blue-800">
-            Astronoby v0.7.0: Planets and ephemerides
-          </a>
-        <li>
-          <a
-            href="https://dev.to/rhannequin/introducing-ephem-5827"
-            class="text-blue-900 underline hover:no-underline visited:text-blue-800">
-            Introducing Ephem
-          </a>
-        <li>
-          <a
-            href="https://dev.to/rhannequin/i-counted-the-number-of-visible-sunsets-with-ruby-1ap7"
-            class="text-blue-900 underline hover:no-underline visited:text-blue-800">
-            I counted the number of visible sunsets with Ruby
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://dev.to/rhannequin/astronoby-gem-v010-released-4big"
-            class="text-blue-900 underline hover:no-underline visited:text-blue-800">
-            astronoby gem v0.1.0 released
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://dev.to/rhannequin/astronomical-computing-ep-2-4c08"
-            class="text-blue-900 underline hover:no-underline visited:text-blue-800">
-            Astronomical computing – Ep 2 - Angles
-          </a>
-        </li>
-      </ul>
-    </li>
-    <li class="mb-3">
-      Podcasts
-      <ul class="list-disc mx-8">
-        <li>
-          <a
-            href="https://open.spotify.com/episode/4851XCeaUSto2wkA49NcOH"
-            class="text-blue-900 underline hover:no-underline visited:text-blue-800">
-            A Junior, A Senior and I: 14 - On Legacy Code
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://bikeshed.thoughtbot.com/464"
-            class="text-blue-900 underline hover:no-underline visited:text-blue-800">
-            The Bike Shed #464: Modelling the stars with Rémy Hannequin
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://podcast.thoughtbot.com/571"
-            class="text-blue-900 underline hover:no-underline visited:text-blue-800">
-            Giant Robots #571: Space, Software, and Surprises with Rémy Hannequin
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://podcast.thoughtbot.com/559"
-            class="text-blue-900 underline hover:no-underline visited:text-blue-800">
-            Giant Robots #559: The European Accessibility Act
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://podcast.thoughtbot.com/538"
-            class="text-blue-900 underline hover:no-underline visited:text-blue-800">
-            Giant Robots #538: Transforming Therapy with Gaming
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://podcast.thoughtbot.com/537"
-            class="text-blue-900 underline hover:no-underline visited:text-blue-800">
-            Giant Robots #537: Navigating the Startup Ecosystem with Marc Gauthier
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://podcast.thoughtbot.com/536"
-            class="text-blue-900 underline hover:no-underline visited:text-blue-800">
-            Giant Robots #536: Exploring AI and Mental Health with Sara Wilder
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://podcast.thoughtbot.com/530"
-            class="text-blue-900 underline hover:no-underline visited:text-blue-800">
-            Giant Robots #530: Giant Robots On Tour
-          </a>
-        </li>
-      </ul>
-    </li>
-  </ul>
-
-  <p class="mb-4">
-    Feel free to contact me on:
+<ul class="list-disc mx-8 mb-4">
+  <li class="mb-3">
     <a
       href="https://github.com/rhannequin"
       class="text-blue-900 underline hover:no-underline visited:text-blue-800">
-      GitHub</a>,
+      GitHub
+    </a>
+    <ul class="list-disc mx-8">
+      <li>
+        <a
+          href="https://github.com/rhannequin/astronoby"
+          class="text-blue-900 underline hover:no-underline visited:text-blue-800">
+          Astronoby</a>:
+        Ruby gem for astronomical data and events
+      </li>
+      <li>
+        <a
+          href="https://github.com/rhannequin/ruby-ephem"
+          class="text-blue-900 underline hover:no-underline visited:text-blue-800">
+          Ephem</a>:
+        Ruby integration of NASA/JPL DE and IMCCE INPOP ephemerides
+      </li>
+    </ul>
+  </li>
+  <li class="mb-3">
+    Conferences
+    <ul class="list-disc mx-8">
+      <li>
+        <a
+          href="https://youtu.be/ZYWfiOM-zlY?si=FOnlZMfqangTIIR8"
+          class="text-blue-900 underline hover:no-underline visited:text-blue-800">
+          Modelling the Cosmos in Ruby
+        </a>
+        at Helvetic Ruby 2025
+      </li>
+    </ul>
+  </li>
+  <li class="mb-3">
+    Meet-up presentations
+    <ul class="list-disc mx-8">
+      <li>Ruby Numeric Types at Paris.rb</li>
+      <li>
+        <a
+          href="https://www.youtube.com/watch?v=QyGnBrtopCo"
+          class="text-blue-900 underline hover:no-underline visited:text-blue-800">
+          Value Objects
+        </a>
+        at Paris.rb
+      </li>
+    </ul>
+  </li>
+  <li class="mb-3">
     <a
-      href="https://www.linkedin.com/in/rhannequin/"
+      href="https://thoughtbot.com/blog/authors/remy-hannequin"
       class="text-blue-900 underline hover:no-underline visited:text-blue-800">
-      LinkedIn</a>,
+      thoughtbot blog
+    </a>
+    <ul class="list-disc mx-8">
+      <li>
+        <a
+          href="https://thoughtbot.com/blog/between-immutability-and-memoization-you-might-have-to-choose"
+          class="text-blue-900 underline hover:no-underline visited:text-blue-800">
+          Between immutability and memoization, you might have to choose
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://thoughtbot.com/blog/numeric-data-types-in-ruby-and-when-to-use-them"
+          class="text-blue-900 underline hover:no-underline visited:text-blue-800">
+          Numeric data types in Ruby and when to use them
+        </a>
+      </li>
+      <li>
+        <em>
+          <a
+            href="https://thoughtbot.com/blog/get-consistent-data-from-your-llm-with-json-schema"
+            class="text-blue-900 underline hover:no-underline visited:text-blue-800">
+            Get consistent data from your LLM with JSON Schema
+          </a>
+        </em>
+      </li>
+      <li>
+        <a
+          href="https://thoughtbot.com/blog/a-journey-towards-better-testing-practices"
+          class="text-blue-900 underline hover:no-underline visited:text-blue-800">
+          A journey towards better testing practices
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://thoughtbot.com/blog/set-up-detox-for-end-to-end-testing-in-your-react-native-app"
+          class="text-blue-900 underline hover:no-underline visited:text-blue-800">
+          Set up Detox for end-to-end testing in your React Native App
+        </a>
+      </li>
+      <li>
+        <em>
+          <a
+            href="https://thoughtbot.com/blog/i-have-a-bad-english-accent"
+            class="text-blue-900 underline hover:no-underline visited:text-blue-800">
+            "I have a bad English accent."
+          </a>
+        </em>
+      </li>
+    </ul>
+  </li>
+  <li class="mb-3">
     <a
-      href="https://ruby.social/@rhannequin"
+      href="https://dev.to/rhannequin"
       class="text-blue-900 underline hover:no-underline visited:text-blue-800">
-      Mastodon</a>,
-    <a
-      href="https://bsky.app/profile/rhannequin.bsky.social"
-      class="text-blue-900 underline hover:no-underline visited:text-blue-800">
-      Bluesky</a>.
-  </p>
-</body>
-</html>
+      Personal blog
+    </a>
+    <ul class="list-disc mx-8">
+      <li>
+        <a
+          href="https://dev.to/rhannequin/where-on-earth-do-shadows-disappear-finding-the-sub-solar-point-with-ruby-5hm"
+          class="text-blue-900 underline hover:no-underline visited:text-blue-800">
+          Where on Earth do shadows disappear? Finding the sub-solar point with Ruby
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://dev.to/rhannequin/astronoby-v070-planets-and-ephemerides-85b"
+          class="text-blue-900 underline hover:no-underline visited:text-blue-800">
+          Astronoby v0.7.0: Planets and ephemerides
+        </a>
+      <li>
+        <a
+          href="https://dev.to/rhannequin/introducing-ephem-5827"
+          class="text-blue-900 underline hover:no-underline visited:text-blue-800">
+          Introducing Ephem
+        </a>
+      <li>
+        <a
+          href="https://dev.to/rhannequin/i-counted-the-number-of-visible-sunsets-with-ruby-1ap7"
+          class="text-blue-900 underline hover:no-underline visited:text-blue-800">
+          I counted the number of visible sunsets with Ruby
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://dev.to/rhannequin/astronoby-gem-v010-released-4big"
+          class="text-blue-900 underline hover:no-underline visited:text-blue-800">
+          astronoby gem v0.1.0 released
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://dev.to/rhannequin/astronomical-computing-ep-2-4c08"
+          class="text-blue-900 underline hover:no-underline visited:text-blue-800">
+          Astronomical computing – Ep 2 - Angles
+        </a>
+      </li>
+    </ul>
+  </li>
+  <li class="mb-3">
+    Podcasts
+    <ul class="list-disc mx-8">
+      <li>
+        <a
+          href="https://open.spotify.com/episode/4851XCeaUSto2wkA49NcOH"
+          class="text-blue-900 underline hover:no-underline visited:text-blue-800">
+          A Junior, A Senior and I: 14 - On Legacy Code
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://bikeshed.thoughtbot.com/464"
+          class="text-blue-900 underline hover:no-underline visited:text-blue-800">
+          The Bike Shed #464: Modelling the stars with Rémy Hannequin
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://podcast.thoughtbot.com/571"
+          class="text-blue-900 underline hover:no-underline visited:text-blue-800">
+          Giant Robots #571: Space, Software, and Surprises with Rémy Hannequin
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://podcast.thoughtbot.com/559"
+          class="text-blue-900 underline hover:no-underline visited:text-blue-800">
+          Giant Robots #559: The European Accessibility Act
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://podcast.thoughtbot.com/538"
+          class="text-blue-900 underline hover:no-underline visited:text-blue-800">
+          Giant Robots #538: Transforming Therapy with Gaming
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://podcast.thoughtbot.com/537"
+          class="text-blue-900 underline hover:no-underline visited:text-blue-800">
+          Giant Robots #537: Navigating the Startup Ecosystem with Marc Gauthier
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://podcast.thoughtbot.com/536"
+          class="text-blue-900 underline hover:no-underline visited:text-blue-800">
+          Giant Robots #536: Exploring AI and Mental Health with Sara Wilder
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://podcast.thoughtbot.com/530"
+          class="text-blue-900 underline hover:no-underline visited:text-blue-800">
+          Giant Robots #530: Giant Robots On Tour
+        </a>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p class="mb-4">
+  Feel free to contact me on:
+  <a
+    href="https://github.com/rhannequin"
+    class="text-blue-900 underline hover:no-underline visited:text-blue-800">
+    GitHub</a>,
+  <a
+    href="https://www.linkedin.com/in/rhannequin/"
+    class="text-blue-900 underline hover:no-underline visited:text-blue-800">
+    LinkedIn</a>,
+  <a
+    href="https://ruby.social/@rhannequin"
+    class="text-blue-900 underline hover:no-underline visited:text-blue-800">
+    Mastodon</a>,
+  <a
+    href="https://bsky.app/profile/rhannequin.bsky.social"
+    class="text-blue-900 underline hover:no-underline visited:text-blue-800">
+    Bluesky</a>.
+</p>
