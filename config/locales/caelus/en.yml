@@ -1,0 +1,17 @@
+en:
+  caelus:
+    home:
+      index:
+        distances_table:
+          distance_from_earth: Distance from Earth
+          distance_from_sun: Distance from Sun
+          velocity: Velocity
+        subtitle: Accurate and open-source astronomical ephemeris
+        title: Caelus
+    units:
+      astronomical_unit:
+        name: Astronomical Unit
+        symbol: AU
+      km_per_second:
+        name: Kilometers per second
+        symbol: km/s
