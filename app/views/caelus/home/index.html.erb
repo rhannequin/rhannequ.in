@@ -1,0 +1,77 @@
+<div class="px-6 py-6 space-y-6">
+  <h1
+    class="text-3xl text-indigo-700 dark:text-indigo-300
+      font-boldtracking-tight"
+  >
+    <%= t ".title" %>
+  </h1>
+
+  <h2 class="text-xl font-semibold text-indigo-600 dark:text-indigo-400">
+    <%= t ".subtitle" %>
+  </h2>
+
+  <table class="table-auto w-full text-left">
+    <thead>
+      <tr>
+        <th>&nbsp;</th>
+        <th>
+          <%= t ".distances_table.distance_from_sun" %>
+          <br>
+          (<%= t "caelus.units.astronomical_unit.symbol" %>)
+        </th>
+        <th>
+          <%= t ".distances_table.distance_from_earth" %>
+          <br>
+          (<%= t "caelus.units.astronomical_unit.symbol" %>)
+        </th>
+        <th>
+          <%= t ".distances_table.velocity" %>
+          <br>
+          (<%= t "caelus.units.km_per_second.symbol" %>)
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+    <% [
+         @sun,
+         @mercury,
+         @venus,
+         @earth,
+         @mars,
+         @jupiter,
+         @saturn,
+         @uranus,
+         @neptune
+       ].each do |body| %>
+        <tr>
+          <td>
+            <strong>
+              <%= body.class.name.delete_prefix("Astronoby::") %>
+            </strong>
+          </td>
+          <td>
+            <%=
+              format_number(
+                (body.astrometric.position - @sun.astrometric.position)
+                  .magnitude
+                  .au
+                  .round(2)
+              )
+            %>
+          </td>
+          <td><%=format_number body.astrometric.distance.au.round(2) %></td>
+          <td>
+            <%=
+              format_number(
+                (body.astrometric.velocity - @sun.astrometric.velocity)
+                  .magnitude
+                  .kmps
+                  .round(2)
+              )
+            %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

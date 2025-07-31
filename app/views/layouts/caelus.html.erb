@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>
+    <%= content_for(:title) || "Caelus" %>
+  </title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= yield :head %>
+  <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
+  <%= javascript_importmap_tags %>
+</head>
+<body
+  class="bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100"
+  data-controller="caelus--dark-mode"
+>
+  <main class="px-6 py-8 space-y-6">
+    <%= render "caelus/shared/dark_mode_toggle" %>
+    <%= yield %>
+  </main>
+</body>
+</html>
