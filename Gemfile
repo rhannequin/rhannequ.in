@@ -37,6 +37,9 @@ gem "kamal", require: false
 # Add HTTP asset caching/compression and X-Sendfile acceleration to Puma [https://github.com/basecamp/thruster/]
 gem "thruster", require: false
 
+# Monitoring
+gem "bugsnag"
+
 # Caelus specific
 gem "astronoby", github: "rhannequin/astronoby"
 
@@ -64,6 +67,7 @@ group :test do
 end
 
 group :development, :test do
+  gem "dotenv-rails"
   gem "rspec-rails"
   gem "factory_bot_rails"
 end
