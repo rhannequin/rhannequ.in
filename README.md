@@ -13,7 +13,7 @@ export $(cat .env | xargs) && bin/kamal deploy
 ## Console
 
 ```
-export $(cat .env | xargs) && bin/kamal app exec -i bin/rails console
+export $(cat .env | xargs) && bin/kamal console
 ```
 
 [rhannequ.in]: https://rhannequ.in
