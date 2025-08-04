@@ -10,4 +10,10 @@ Source code for [rhannequ.in].
 export $(cat .env | xargs) && bin/kamal deploy
 ```
 
+## Console
+
+```
+export $(cat .env | xargs) && bin/kamal app exec -i bin/rails console
+```
+
 [rhannequ.in]: https://rhannequ.in
