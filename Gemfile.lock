@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rhannequin/astronoby.git
-  revision: f09e12a7ccf61daf02ce4afa2370d0d5650a5bc2
+  revision: 0f65fda14a62bc50115d09f623320f2214bcc3ed
   specs:
     astronoby (0.7.0)
       ephem (~> 0.3)
@@ -118,7 +118,7 @@ GEM
       railties (>= 6.1)
     drb (2.2.3)
     ed25519 (1.4.0)
-    ephem (0.4.0)
+    ephem (0.4.1)
       minitar (~> 0.12)
       numo-narray (~> 0.9.2.1)
       zlib (~> 3.2)
