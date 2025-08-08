@@ -5,5 +5,7 @@ Rails.application.routes.draw do
 
   namespace :caelus do
     root "home#index"
+
+    resources :planets, only: [:show], param: :id
   end
 end

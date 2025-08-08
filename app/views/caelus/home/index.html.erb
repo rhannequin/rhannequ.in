@@ -15,61 +15,19 @@
       <tr>
         <th>&nbsp;</th>
         <th>
-          <%= t ".distances_table.distance_from_sun" %>
-          <br>
-          (<%= t "caelus.units.astronomical_unit.symbol" %>)
-        </th>
-        <th>
-          <%= t ".distances_table.distance_from_earth" %>
-          <br>
-          (<%= t "caelus.units.astronomical_unit.symbol" %>)
-        </th>
-        <th>
-          <%= t ".distances_table.velocity" %>
-          <br>
-          (<%= t "caelus.units.km_per_second.symbol" %>)
+          <%= t ".distances_table.distance_from_earth" %> (<%= t "caelus.units.astronomical_unit.symbol" %>)
         </th>
       </tr>
     </thead>
     <tbody>
-    <% [
-         @sun,
-         @mercury,
-         @venus,
-         @earth,
-         @mars,
-         @jupiter,
-         @saturn,
-         @uranus,
-         @neptune
-       ].each do |body| %>
+    <% @planets.each do |planet| %>
         <tr>
           <td>
             <strong>
-              <%= body.class.name.delete_prefix("Astronoby::") %>
+              <%= planet.class.planet_name %>
             </strong>
           </td>
-          <td>
-            <%=
-              format_number(
-                (body.astrometric.position - @sun.astrometric.position)
-                  .magnitude
-                  .au
-                  .round(2)
-              )
-            %>
-          </td>
-          <td><%=format_number body.astrometric.distance.au.round(2) %></td>
-          <td>
-            <%=
-              format_number(
-                (body.astrometric.velocity - @sun.astrometric.velocity)
-                  .magnitude
-                  .kmps
-                  .round(2)
-              )
-            %>
-          </td>
+          <td><%= format_number planet.distance_from_earth.au.round(2) %></td>
         </tr>
       <% end %>
     </tbody>
