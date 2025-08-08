@@ -4,10 +4,26 @@ en:
       index:
         distances_table:
           distance_from_earth: Distance from Earth
-          distance_from_sun: Distance from Sun
-          velocity: Velocity
         subtitle: Accurate and open-source astronomical ephemeris
         title: Caelus
+    models:
+      planets:
+        mercury:
+          name: Mercury
+        venus:
+          name: Venus
+        earth:
+          name: Earth
+        mars:
+          name: Mars
+        jupiter:
+          name: Jupiter
+        saturn:
+          name: Saturn
+        uranus:
+          name: Uranus
+        neptune:
+          name: Neptune
     units:
       astronomical_unit:
         name: Astronomical Unit
