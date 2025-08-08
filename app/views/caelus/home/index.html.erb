@@ -1,35 +1,13 @@
-<div class="px-6 py-6 space-y-6">
-  <h1
-    class="text-3xl text-indigo-700 dark:text-indigo-300
-      font-boldtracking-tight"
-  >
-    <%= t ".title" %>
-  </h1>
+<div class="lg:col-span-4 space-y-6">
+  <%= render "tonight_sky" %>
+  <%= render "current_moon" %>
+  <%= render "sun_moon_times" %>
+</div>
 
-  <h2 class="text-xl font-semibold text-indigo-600 dark:text-indigo-400">
-    <%= t ".subtitle" %>
-  </h2>
+<div class="lg:col-span-5 space-y-6">
+  <%= render "planets_tonight", planets: @planets, observer: @observer %>
+</div>
 
-  <table class="table-auto w-full text-left">
-    <thead>
-      <tr>
-        <th>&nbsp;</th>
-        <th>
-          <%= t ".distances_table.distance_from_earth" %> (<%= t "caelus.units.astronomical_unit.symbol" %>)
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-    <% @planets.each do |planet| %>
-        <tr>
-          <td>
-            <strong>
-              <%= planet.class.planet_name %>
-            </strong>
-          </td>
-          <td><%= format_number planet.distance_from_earth.au.round(2) %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
+<div class="lg:col-span-3 space-y-6">
+  <%= render "featured_objects" %>
 </div>

@@ -1,0 +1,112 @@
+:root {
+  /* Light Mode - Cosmic Day Theme */
+  --background: 220 30% 96%;
+  --foreground: 220 30% 8%;
+  --card: 220 15% 98%;
+  --card-foreground: 220 30% 8%;
+  --primary: 240 100% 60%;
+  --primary-foreground: 220 15% 98%;
+  --muted-foreground: 220 15% 45%;
+  --accent: 280 80% 70%;
+  --border: 220 15% 88%;
+
+  /* Light Mode Cosmic Effects */
+  --gradient-cosmic: linear-gradient(135deg, hsl(240 100% 60%), hsl(280 80% 70%));
+  --shadow-cosmic: 0 10px 40px hsl(220 30% 8% / 0.1);
+  --glow-accent: 0 0 30px hsl(280 80% 70% / 0.15);
+
+  --radius: 1rem;
+}
+
+.dark {
+  /* Dark Mode - Cosmic Night Theme */
+  --background: 220 27% 8%;
+  --foreground: 220 15% 95%;
+  --card: 220 20% 12%;
+  --card-foreground: 220 15% 95%;
+  --primary: 240 100% 70%;
+  --primary-foreground: 220 27% 8%;
+  --muted-foreground: 220 15% 65%;
+  --accent: 280 100% 60%;
+  --border: 220 20% 20%;
+
+  /* Dark Mode Cosmic Effects */
+  --gradient-cosmic: linear-gradient(135deg, hsl(240 100% 70%), hsl(280 100% 60%));
+  --shadow-cosmic: 0 10px 40px hsl(220 27% 8% / 0.5);
+  --glow-accent: 0 0 30px hsl(280 100% 60% / 0.2);
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+
+.bg-card {
+  background-color: hsl(var(--card));
+}
+
+.bg-primary {
+  background-color: hsl(var(--primary));
+}
+
+.cosmic-card {
+  border-radius: 0.75rem;
+  border-width: 1px;
+  border-color: hsl(var(--border) / 0.5);
+  padding: 1.5rem;
+  --tw-backdrop-blur: blur(12px);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+  background: linear-gradient(135deg, hsl(var(--card) / 0.8), hsl(var(--card) / 0.6));
+  box-shadow: var(--shadow-cosmic), inset 0 1px 0 hsl(var(--border) / 0.3);
+}
+
+.text-muted-foreground {
+  color: hsl(var(--muted-foreground));
+}
+
+.text-card-foreground {
+  color: hsl(var(--card-foreground));
+}
+
+.text-primary {
+  color: hsl(var(--primary));
+}
+
+.text-foreground {
+  color: hsl(var(--foreground));
+}
+
+.text-primary-foreground {
+  color: hsl(var(--primary-foreground));
+}
+
+/* Cosmic Text Gradients */
+.text-cosmic {
+  background: var(--gradient-cosmic);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-accent {
+  color: hsl(var(--accent));
+}
+
+.glow-accent {
+  box-shadow: var(--glow-accent);
+}
+
+.transition-colors {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.border-border\/30 {
+  border-color: hsl(var(--border) / 0.3);
+}
