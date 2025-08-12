@@ -1,6 +1,12 @@
 en:
   caelus:
     home:
+      current_moon:
+        titles:
+          age: "Age:"
+          rise: "Rise:"
+          set: "Set:"
+          next_phase: "Next Phase:"
       index:
         distances_table:
           distance_from_earth: Distance from Earth
@@ -16,6 +22,12 @@ en:
           set: "Set:"
         visibility:
           visible: Visible
+      tonight_sky:
+        title: 🌌 Tonight's Sky
+        titles:
+          astronomical_twilight: "Astronomical Twilight:"
+          moon_interference: "Moon Interference:"
+          planets_visible: "Planets Visible:"
     models:
       planets:
         mercury:

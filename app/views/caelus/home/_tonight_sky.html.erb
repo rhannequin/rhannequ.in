@@ -1,39 +1,33 @@
 <div class="rounded-lg border bg-card text-card-foreground shadow-sm cosmic-card">
   <h2 class="text-xl font-bold mb-4 text-cosmic">
-    🌌 Tonight's Sky
+    <%= t ".title" %>
   </h2>
   <div class="space-y-3 text-sm">
     <div class="flex justify-between">
-        <span class="text-muted-foreground">
-          Astronomical Twilight:
-        </span>
+      <span class="text-muted-foreground">
+        <%= t ".titles.astronomical_twilight" %>
+      </span>
       <span class="font-medium">
-          19:45
-        </span>
+        <%= l @twilight_events.evening_astronomical_twilight_time, format: :hm %>
+        :
+        <%= l @next_twilight_events.morning_astronomical_twilight_time, format: :hm %>
+      </span>
     </div>
     <div class="flex justify-between">
-        <span class="text-muted-foreground">
-          Best Viewing:
-        </span>
-      <span class="font-medium text-primary">
-          22:00 - 02:00
-        </span>
-    </div>
-    <div class="flex justify-between">
-        <span class="text-muted-foreground">
-          Moon Interference:
-        </span>
+      <span class="text-muted-foreground">
+        <%= t ".titles.moon_interference" %>
+      </span>
       <span class="font-medium text-yellow-400">
-          Moderate
-        </span>
+        Moderate
+      </span>
     </div>
     <div class="flex justify-between">
-        <span class="text-muted-foreground">
-          Planets Visible:
-        </span>
+      <span class="text-muted-foreground">
+        <%= t ".titles.planets_visible" %>
+      </span>
       <span class="font-medium text-green-400">
-          3 planets
-        </span>
+        3 planets
+      </span>
     </div>
   </div>
 </div>
