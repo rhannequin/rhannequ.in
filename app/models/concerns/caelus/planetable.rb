@@ -27,6 +27,22 @@ module Caelus
         @distance_from_earth ||= planet.astrometric.distance
       end
 
+      def magnitude
+        @magnitude ||= planet.apparent_magnitude.round(2)
+      end
+
+      def illuminated_percentage
+        @illuminated_percentage ||= planet.illuminated_fraction.round(3) * 100
+      end
+
+      def rts(observer:)
+        @rts ||= Astronoby::RiseTransitSetCalculator.new(
+          body: self.class.planet_class,
+          observer: observer,
+          ephem: SPK.inpop19a
+        )
+      end
+
       private
 
       def planet
