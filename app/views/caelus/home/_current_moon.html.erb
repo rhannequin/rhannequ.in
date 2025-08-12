@@ -12,31 +12,31 @@
     <div class="space-y-3 text-sm">
       <div class="flex justify-between border-b border-border/30 pb-2">
           <span class="text-muted-foreground">
-            Age:
+            <%= t ".titles.age" %>
           </span>
         <span class="font-medium">
-            11.2 days
-          </span>
+          11.2 days
+        </span>
       </div>
       <div class="flex justify-between border-b border-border/30 pb-2">
-          <span class="text-muted-foreground">
-            Rise:
-          </span>
+        <span class="text-muted-foreground">
+          <%= t ".titles.rise" %>
+        </span>
         <span class="font-medium">
-            15:43
-          </span>
+          <%= l @moon_rising_time, format: :hm %>
+        </span>
       </div>
       <div class="flex justify-between border-b border-border/30 pb-2">
-          <span class="text-muted-foreground">
-            Set:
-          </span>
+        <span class="text-muted-foreground">
+          <%= t ".titles.set" %>
+        </span>
         <span class="font-medium">
-            03:21
-          </span>
+          <%= l @moon_setting_time, format: :hm %>
+        </span>
       </div>
       <div class="pt-2">
         <p class="text-muted-foreground text-xs">
-          Next Phase:
+          <%= t ".titles.next_phase" %>
         </p>
         <p class="font-medium">
           Full Moon
