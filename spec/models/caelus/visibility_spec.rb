@@ -1,0 +1,148 @@
+# frozen_string_literal: true
+
+require "rails_helper"
+
+RSpec.describe Caelus::Visibility, type: :model do
+  describe "#visible?" do
+    context "when it rises early in the night" do
+      it "returns true" do
+        date = Date.new(2025, 12, 1)
+        observer = Astronoby::Observer.new(
+          latitude: Astronoby::Angle.from_degrees(48.8),
+          longitude: Astronoby::Angle.from_degrees(2.1)
+        )
+        visibility = described_class.new(
+          body: Caelus::Jupiter,
+          observer: observer,
+          date: date
+        )
+
+        expect(visibility.visible?).to be true
+      end
+    end
+
+    context "when it sets early in the night" do
+      it "returns true" do
+        date = Date.new(2025, 2, 1)
+        observer = Astronoby::Observer.new(
+          latitude: Astronoby::Angle.from_degrees(48.8),
+          longitude: Astronoby::Angle.from_degrees(2.1)
+        )
+        visibility = described_class.new(
+          body: Caelus::Neptune,
+          observer: observer,
+          date: date
+        )
+
+        expect(visibility.visible?).to be true
+      end
+    end
+
+    context "when it rises late in the night" do
+      it "returns true" do
+        date = Date.new(2025, 8, 25)
+        observer = Astronoby::Observer.new(
+          latitude: Astronoby::Angle.from_degrees(48.8),
+          longitude: Astronoby::Angle.from_degrees(2.1)
+        )
+        visibility = described_class.new(
+          body: Caelus::Jupiter,
+          observer: observer,
+          date: date
+        )
+
+        expect(visibility.visible?).to be true
+      end
+    end
+
+    context "when it sets late in the night" do
+      it "returns true" do
+        date = Date.new(2025, 1, 25)
+        observer = Astronoby::Observer.new(
+          latitude: Astronoby::Angle.from_degrees(48.8),
+          longitude: Astronoby::Angle.from_degrees(2.1)
+        )
+        visibility = described_class.new(
+          body: Caelus::Jupiter,
+          observer: observer,
+          date: date
+        )
+
+        expect(visibility.visible?).to be true
+      end
+    end
+
+    context "when it is not up during the night" do
+      it "returns false" do
+        date = Date.new(2025, 12, 1)
+        observer = Astronoby::Observer.new(
+          latitude: Astronoby::Angle.from_degrees(48.8),
+          longitude: Astronoby::Angle.from_degrees(2.1)
+        )
+        visibility = described_class.new(
+          body: Caelus::Mars,
+          observer: observer,
+          date: date
+        )
+
+        expect(visibility.visible?).to be false
+      end
+    end
+  end
+
+  context "when the body is Mercury or Venus" do
+    it "uses civil twilight for the night boundaries" do
+      date = Date.new(2025, 1, 1)
+      observer = Astronoby::Observer.new(
+        latitude: Astronoby::Angle.from_degrees(48.8),
+        longitude: Astronoby::Angle.from_degrees(2.1)
+      )
+      visibility = described_class.new(
+        body: Caelus::Mercury,
+        observer: observer,
+        date: date
+      )
+
+      expect(visibility.visible?).to be true
+
+      date = Date.new(2025, 2, 7)
+      observer = Astronoby::Observer.new(
+        latitude: Astronoby::Angle.from_degrees(48.8),
+        longitude: Astronoby::Angle.from_degrees(2.1)
+      )
+      visibility = described_class.new(
+        body: Caelus::Mercury,
+        observer: observer,
+        date: date
+      )
+
+      expect(visibility.visible?).to be false
+
+      date = Date.new(2025, 6, 1)
+      observer = Astronoby::Observer.new(
+        latitude: Astronoby::Angle.from_degrees(48.8),
+        longitude: Astronoby::Angle.from_degrees(2.1)
+      )
+      visibility = described_class.new(
+        body: Caelus::Venus,
+        observer: observer,
+        date: date
+      )
+
+      expect(visibility.visible?).to be true
+
+      date = Date.new(2025, 12, 31)
+      observer = Astronoby::Observer.new(
+        latitude: Astronoby::Angle.from_degrees(48.8),
+        longitude: Astronoby::Angle.from_degrees(2.1)
+      )
+      visibility = described_class.new(
+        body: Caelus::Venus,
+        observer: observer,
+        date: date
+      )
+
+      expect(visibility.visible?).to be false
+    end
+  end
+end

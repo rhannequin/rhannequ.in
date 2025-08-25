@@ -3,19 +3,19 @@
 module Caelus
   class HomeController < ApplicationController
     def index
-      @planets = [
-        Mercury.new,
-        Venus.new,
-        Mars.new,
-        Jupiter.new,
-        Saturn.new,
-        Uranus.new,
-        Neptune.new
-      ]
       @observer = Astronoby::Observer.new(
         latitude: Astronoby::Angle.from_degrees(51.5074),
         longitude: Astronoby::Angle.from_degrees(-0.1278)
       )
+      @planets = [
+        Mercury.new(observer: @observer),
+        Venus.new(observer: @observer),
+        Mars.new(observer: @observer),
+        Jupiter.new(observer: @observer),
+        Saturn.new(observer: @observer),
+        Uranus.new(observer: @observer),
+        Neptune.new(observer: @observer)
+      ]
       @twilight_events = Astronoby::TwilightCalculator.new(
         observer: @observer,
         ephem: SPK.inpop19a

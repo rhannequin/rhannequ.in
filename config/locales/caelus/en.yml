@@ -21,8 +21,12 @@ en:
           rise: "Rise:"
           set: "Set:"
         visibility:
+          not_visible: Not Visible
           visible: Visible
       tonight_sky:
+        planets_visible_count:
+          one: "1 planet"
+          other: "%{count} planets"
         title: 🌌 Tonight's Sky
         titles:
           astronomical_twilight: "Astronomical Twilight:"

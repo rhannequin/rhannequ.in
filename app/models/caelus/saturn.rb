@@ -12,7 +12,8 @@ module Caelus
       :saturn
     end
 
-    def initialize(time: Time.now)
+    def initialize(observer:, time: Time.now)
+      @observer = observer
       @time = time
     end
   end

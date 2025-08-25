@@ -26,7 +26,10 @@
         <%= t ".titles.planets_visible" %>
       </span>
       <span class="font-medium text-green-400">
-        3 planets
+        <%= t(
+          ".planets_visible_count",
+          count: @planets.count { _1.visibility.visible? }
+        ) %>
       </span>
     </div>
   </div>
