@@ -1,11 +1,33 @@
 en:
   caelus:
     home:
+      current_moon:
+        titles:
+          age: "Age:"
+          rise: "Rise:"
+          set: "Set:"
+          next_phase: "Next Phase:"
       index:
         distances_table:
           distance_from_earth: Distance from Earth
-        subtitle: Accurate and open-source astronomical ephemeris
-        title: Caelus
+      planets_tonight:
+        illumination: "%{percentage}% illuminated"
+        title: 🪐 Planets Tonight
+        titles:
+          constellation: "Constellation:"
+          distance: "Distance:"
+          magnitude: "Magnitude:"
+          phase: "Phase:"
+          rise: "Rise:"
+          set: "Set:"
+        visibility:
+          visible: Visible
+      tonight_sky:
+        title: 🌌 Tonight's Sky
+        titles:
+          astronomical_twilight: "Astronomical Twilight:"
+          moon_interference: "Moon Interference:"
+          planets_visible: "Planets Visible:"
     models:
       planets:
         mercury:
@@ -24,6 +46,7 @@ en:
           name: Uranus
         neptune:
           name: Neptune
+    title: Caelus
     units:
       astronomical_unit:
         name: Astronomical Unit
