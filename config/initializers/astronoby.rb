@@ -12,6 +12,6 @@ class SPK
   end
 
   def inpop19a
-    Astronoby::Ephem.load("lib/astronoby/spk/inpop19a.bsp")
+    Astronoby::Ephem.load("lib/astronoby/spk/inpop19a_2024_2026.bsp")
   end
 end
