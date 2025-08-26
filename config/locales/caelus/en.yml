@@ -2,11 +2,21 @@ en:
   caelus:
     home:
       current_moon:
+        age: "%{age} days"
+        phases:
+          first_quarter: First Quarter
+          full_moon: Full Moon
+          last_quarter: Last Quarter
+          new_moon: New Moon
+          waning_crescent: Waning Crescent
+          waning_gibbous: Waning Gibbous
+          waxing_crescent: Waxing Crescent
+          waxing_gibbous: Waxing Gibbous
         titles:
           age: "Age:"
           rise: "Rise:"
           set: "Set:"
-          next_phase: "Next Phase:"
+          next_phase: "Next major phase:"
       index:
         distances_table:
           distance_from_earth: Distance from Earth

@@ -4,10 +4,10 @@
       🌕
     </div>
     <h2 class="text-2xl font-bold mb-2 text-cosmic">
-      Waxing Gibbous
+      <%= t ".phases.#{moon.current_phase_name}" %>
     </h2>
     <p class="text-3xl font-bold text-primary mb-4">
-      78.3%
+      <%= moon.illuminated_percentage %>%
     </p>
     <div class="space-y-3 text-sm">
       <div class="flex justify-between border-b border-border/30 pb-2">
@@ -15,7 +15,7 @@
             <%= t ".titles.age" %>
           </span>
         <span class="font-medium">
-          11.2 days
+          <%= t ".age", age: moon.age %>
         </span>
       </div>
       <div class="flex justify-between border-b border-border/30 pb-2">
@@ -23,7 +23,7 @@
           <%= t ".titles.rise" %>
         </span>
         <span class="font-medium">
-          <%= l @moon_rising_time, format: :hm %>
+          <%= l moon.rts.rising_time, format: :hm %>
         </span>
       </div>
       <div class="flex justify-between border-b border-border/30 pb-2">
@@ -31,7 +31,7 @@
           <%= t ".titles.set" %>
         </span>
         <span class="font-medium">
-          <%= l @moon_setting_time, format: :hm %>
+          <%= l moon.rts.setting_time, format: :hm %>
         </span>
       </div>
       <div class="pt-2">
@@ -39,10 +39,10 @@
           <%= t ".titles.next_phase" %>
         </p>
         <p class="font-medium">
-          Full Moon
+          <%= t ".phases.#{moon.next_phase.phase}" %>
         </p>
         <p class="text-xs text-accent">
-          Jan 15, 2025
+          <%= l moon.next_phase.time.to_date, format: :short %>
         </p>
       </div>
     </div>
