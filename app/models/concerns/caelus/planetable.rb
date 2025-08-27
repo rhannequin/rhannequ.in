@@ -32,7 +32,7 @@ module Caelus
       end
 
       def illuminated_percentage
-        @illuminated_percentage ||= planet.illuminated_fraction.round(3) * 100
+        @illuminated_percentage ||= (planet.illuminated_fraction * 100).round(2)
       end
 
       def rts

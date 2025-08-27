@@ -1,7 +1,7 @@
 <div class="rounded-lg border bg-card text-card-foreground shadow-sm cosmic-card">
   <div class="text-center">
-    <div class="text-6xl mb-4 animate-float">
-      🌕
+    <div class="flex justify-center items-center mb-4">
+      <%= Caelus::MoonPhaseSvg.new(moon, size: 50).draw %>
     </div>
     <h2 class="text-2xl font-bold mb-2 text-cosmic">
       <%= t ".phases.#{moon.current_phase_name}" %>
