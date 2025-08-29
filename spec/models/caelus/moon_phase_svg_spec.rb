@@ -6,9 +6,11 @@ RSpec.describe Caelus::MoonPhaseSvg, type: :model do
   describe "#draw" do
     context "when the moon is a waxing crescent" do
       it "generates a waxing crescent SVG" do
-        observer = double
-        time = Time.utc(2025, 8, 28)
-        moon = Caelus::Moon.new(observer: observer, time: time)
+        moon = instance_double(
+          Caelus::Moon,
+          phase_angle: Astronoby::Angle.from_degrees(125.5),
+          age: 4.75
+        )
         moon_phase_svg = Caelus::MoonPhaseSvg.new(moon)
 
         output = moon_phase_svg.draw.gsub(/\s+/, " ").strip
@@ -34,7 +36,7 @@ RSpec.describe Caelus::MoonPhaseSvg, type: :model do
               stroke-width="1"
             />
             <path
-              d="M 200.0 20.5 A 179.5 179.5 0 0 0 200.0 379.5 A 104.20347011266489 179.5 0 1 0 200.0 20.5"
+              d="M 200.0 20.5 A 179.5 179.5 0 0 0 200.0 379.5 A 104.23618055011369 179.5 0 1 0 200.0 20.5"
               fill="#222"
             />
          </svg>
@@ -48,9 +50,11 @@ SVG
 
     context "when the moon is full" do
       it "generates a full moon SVG" do
-        observer = double
-        time = Time.utc(2025, 9, 7, 18, 8)
-        moon = Caelus::Moon.new(observer: observer, time: time)
+        moon = instance_double(
+          Caelus::Moon,
+          phase_angle: Astronoby::Angle.from_degrees(0.25),
+          age: 15.5
+        )
         moon_phase_svg = Caelus::MoonPhaseSvg.new(moon)
 
         output = moon_phase_svg.draw.gsub(/\s+/, " ").strip
@@ -89,9 +93,11 @@ SVG
 
     context "when the moon is new" do
       it "generates a new moon SVG" do
-        observer = double
-        time = Time.utc(2025, 9, 21, 19, 54)
-        moon = Caelus::Moon.new(observer: observer, time: time)
+        moon = instance_double(
+          Caelus::Moon,
+          phase_angle: Astronoby::Angle.from_degrees(179.5),
+          age: 29.57
+        )
         moon_phase_svg = Caelus::MoonPhaseSvg.new(moon)
 
         output = moon_phase_svg.draw.gsub(/\s+/, " ").strip
@@ -134,9 +140,11 @@ SVG
 
     context "when the moon is wanning gibbous" do
       it "generates a wanning gibbous SVG" do
-        observer = double
-        time = Time.utc(2025, 9, 10)
-        moon = Caelus::Moon.new(observer: observer, time: time)
+        moon = instance_double(
+          Caelus::Moon,
+          phase_angle: Astronoby::Angle.from_degrees(30),
+          age: 17.75
+        )
         moon_phase_svg = Caelus::MoonPhaseSvg.new(moon)
 
         output = moon_phase_svg.draw.gsub(/\s+/, " ").strip
@@ -162,7 +170,7 @@ SVG
               stroke-width="1"
             />
             <path
-              d="M 200.0 20.5 A 179.5 179.5 0 0 1 200.0 379.5 A 155.02530660294195 179.5 0 0 0 200.0 20.5"
+              d="M 200.0 20.5 A 179.5 179.5 0 0 1 200.0 379.5 A 155.45155997930675 179.5 0 0 0 200.0 20.5"
               fill="#222"
             />
          </svg>
