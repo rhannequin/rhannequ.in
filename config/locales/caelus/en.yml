@@ -45,6 +45,13 @@ en:
           sunrise: "Sunrise:"
           sunset: "Sunset:"
       tonight_sky:
+        moon_interference:
+          extreme: Extreme
+          full: Full
+          high: High
+          low: Low
+          moderate: Moderate
+          none: None
         planets_visible_count:
           one: "1 planet"
           other: "%{count} planets"

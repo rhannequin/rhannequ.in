@@ -17,8 +17,9 @@
       <span class="text-muted-foreground">
         <%= t ".titles.moon_interference" %>
       </span>
-      <span class="font-medium text-yellow-400">
-        Moderate
+      <% interference = Caelus::MoonInterference.new(observer: observer).interference %>
+      <span class="font-medium <%= interference_color(interference) %>">
+        <%= t ".moon_interference.#{interference}" %>
       </span>
     </div>
     <div class="flex justify-between">
