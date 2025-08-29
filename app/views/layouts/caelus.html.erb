@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <title>
-    <%= content_for(:title) || "Caelus" %>
+    <%= content_for(:title) || t("caelus.title") %>
   </title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -16,14 +16,19 @@
 </head>
 <body class="text-gray-900" data-controller="caelus--dark-mode">
   <main class="px-6 py-8 space-y-6">
-    <%= render "caelus/shared/dark_mode_toggle" %>
+    <div class="flex justify-end items-center m-0 gap-4">
+      <%= render "caelus/shared/location_selector" %>
+      <%= render "caelus/shared/dark_mode_toggle" %>
+    </div>
     <h1 class="text-3xl font-bold text-cosmic">
       ✨ <%= t "caelus.title" %>
     </h1>
     <p class="text-muted-foreground">
       <%= l Date.today, format: :long %>
+      [<%= format_observer_coordinates(@observer) %>]
     </p>
     <%= yield %>
   </main>
+  <turbo-frame id="location_modal"></turbo-frame>
 </body>
 </html>

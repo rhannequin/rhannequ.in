@@ -3,10 +3,6 @@
 module Caelus
   class HomeController < ApplicationController
     def index
-      @observer = Astronoby::Observer.new(
-        latitude: Astronoby::Angle.from_degrees(51.5074),
-        longitude: Astronoby::Angle.from_degrees(-0.1278)
-      )
       @planets = [
         Mercury.new(observer: @observer),
         Venus.new(observer: @observer),

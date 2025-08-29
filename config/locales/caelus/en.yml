@@ -1,5 +1,16 @@
 en:
   caelus:
+    location:
+      edit:
+        current: "Current: %{latitude}°, %{longitude}°"
+        form:
+          cancel: Cancel
+          latitude: Latitude
+          longitude: Longitude
+          submit: Save Location
+        manually: or enter coordinates manually
+        title: Set Your Location
+        use_current_btn: Use my current location
     home:
       current_moon:
         age: "%{age} days"
@@ -78,6 +89,10 @@ en:
           name: Uranus
         neptune:
           name: Neptune
+    shared:
+      location_selector:
+        location_modal:
+          label: Set your location
     title: Caelus
     units:
       astronomical_unit:
