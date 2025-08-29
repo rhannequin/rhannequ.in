@@ -33,6 +33,17 @@ en:
         visibility:
           not_visible: Not Visible
           visible: Visible
+      sun_moon_times:
+        title: "Sun & Moon Times"
+        titles:
+          civil_twilight: "Civil Twilight:"
+          civil_twilight_end: "Civil Twilight End:"
+          moon: Moon
+          moonrise: "Moonrise:"
+          moonset: "Moonset:"
+          sun: Sun
+          sunrise: "Sunrise:"
+          sunset: "Sunset:"
       tonight_sky:
         planets_visible_count:
           one: "1 planet"

@@ -16,6 +16,7 @@ module Caelus
         Uranus.new(observer: @observer),
         Neptune.new(observer: @observer)
       ]
+      @sun = Sun.new(observer: @observer)
       @moon = Moon.new(observer: @observer)
       @twilight_events = Astronoby::TwilightCalculator.new(
         observer: @observer,
