@@ -16,7 +16,10 @@
             <%= t ".titles.civil_twilight" %>
           </span>
           <span class="font-medium">
-            <%= l @twilight_events.morning_civil_twilight_time, format: :hm %>
+            <%= nillable_datetime(
+              @twilight_events.morning_civil_twilight_time,
+              format: :hm
+            ) %>
           </span>
         </div>
         <div class="flex justify-between">
@@ -24,7 +27,7 @@
             <%= t ".titles.sunrise" %>
           </span>
           <span class="font-medium text-yellow-400">
-            <%= l @sun.rts.rising_time, format: :hm %>
+            <%= nillable_datetime @sun.rts.rising_time, format: :hm %>
           </span>
         </div>
         <div class="flex justify-between">
@@ -32,7 +35,7 @@
             <%= t ".titles.sunset" %>
           </span>
           <span class="font-medium text-orange-400">
-            <%= l @sun.rts.setting_time, format: :hm %>
+            <%= nillable_datetime @sun.rts.setting_time, format: :hm %>
           </span>
         </div>
         <div class="flex justify-between">
@@ -40,7 +43,10 @@
             <%= t ".titles.civil_twilight_end" %>
           </span>
           <span class="font-medium">
-            <%= l @twilight_events.evening_civil_twilight_time, format: :hm %>
+            <%= nillable_datetime(
+              @twilight_events.evening_civil_twilight_time,
+              format: :hm
+            ) %>
           </span>
         </div>
       </div>
@@ -61,7 +67,7 @@
             <%= t ".titles.moonrise" %>
           </span>
           <span class="font-medium text-blue-300">
-            <%= l @moon.rts.rising_time, format: :hm %>
+            <%= nillable_datetime @moon.rts.rising_time, format: :hm %>
           </span>
         </div>
         <div class="flex justify-between">
@@ -69,7 +75,7 @@
             <%= t ".titles.moonset" %>
           </span>
           <span class="font-medium text-blue-300">
-            <%= l @moon.rts.setting_time, format: :hm %>
+            <%= nillable_datetime @moon.rts.setting_time, format: :hm %>
           </span>
         </div>
       </div>

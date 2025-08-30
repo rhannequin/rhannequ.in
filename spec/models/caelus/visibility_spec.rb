@@ -145,4 +145,38 @@ RSpec.describe Caelus::Visibility, type: :model do
       expect(visibility.visible?).to be false
     end
   end
+
+  context "when there's no twilight" do
+    it "returns false" do
+      date = Date.new(2025, 6, 20)
+      observer = Astronoby::Observer.new(
+        latitude: Astronoby::Angle.from_degrees(80),
+        longitude: Astronoby::Angle.from_degrees(0)
+      )
+      visibility = described_class.new(
+        body: Caelus::Moon,
+        observer: observer,
+        date: date
+      )
+
+      expect(visibility.visible?).to be false
+    end
+  end
+
+  context "when the body does not rise or set" do
+    it "returns false" do
+      date = Date.new(2025, 6, 20)
+      observer = Astronoby::Observer.new(
+        latitude: Astronoby::Angle.from_degrees(80),
+        longitude: Astronoby::Angle.from_degrees(0)
+      )
+      visibility = described_class.new(
+        body: Caelus::Mars,
+        observer: observer,
+        date: date
+      )
+
+      expect(visibility.visible?).to be false
+    end
+  end
 end
