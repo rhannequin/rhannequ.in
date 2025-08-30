@@ -18,14 +18,18 @@ RSpec.describe Caelus::NumberHelper do
       expect(format_number(123.4500)).to eq("123.45")
     end
 
-    it "formats a number with a unit" do
-      expect(format_number(123.456, unit: "kg")).to eq("123.46 kg")
+    it "formats a number with a supported unit" do
+      expect(format_number(123.456, unit: :au)).to eq("123.46 AU")
+    end
+
+    it "formats a number with a unsupported unit" do
+      expect(format_number(123.456, unit: :kg)).to eq("123.46")
     end
 
     it "handles zero correctly" do
       expect(format_number(0)).to eq("0.00")
       expect(format_number(0, precision: 3)).to eq("0.000")
-      expect(format_number(0, unit: "m")).to eq("0.00 m")
+      expect(format_number(0, unit: :au)).to eq("0.00 AU")
     end
   end
 end

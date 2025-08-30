@@ -1,11 +1,79 @@
 en:
   caelus:
+    location:
+      edit:
+        current: "Current: %{latitude}°, %{longitude}°"
+        form:
+          cancel: Cancel
+          latitude: Latitude
+          longitude: Longitude
+          utc_offset: Timezone (UTC Offset)
+          utc_offset_help: Select your timezone to ensure accurate astronomical calculations
+          submit: Save Location
+        manually: or enter coordinates manually
+        title: Set Your Location
+        use_current_btn: Use my current location
     home:
+      current_moon:
+        age: "%{age} days"
+        phases:
+          first_quarter: First Quarter
+          full_moon: Full Moon
+          last_quarter: Last Quarter
+          new_moon: New Moon
+          waning_crescent: Waning Crescent
+          waning_gibbous: Waning Gibbous
+          waxing_crescent: Waxing Crescent
+          waxing_gibbous: Waxing Gibbous
+        titles:
+          age: "Age:"
+          next_phase: "Next major phase:"
+          rise: "Rise:"
+          set: "Set:"
+          transit: "Transit:"
       index:
         distances_table:
           distance_from_earth: Distance from Earth
-        subtitle: Accurate and open-source astronomical ephemeris
-        title: Caelus
+      planets_tonight:
+        illumination: "%{percentage}% illuminated"
+        title: 🪐 Planets Tonight
+        titles:
+          constellation: "Constellation:"
+          distance: "Distance:"
+          magnitude: "Magnitude:"
+          phase: "Phase:"
+          rise: "Rise:"
+          set: "Set:"
+        visibility:
+          not_visible: Not Visible
+          visible: Visible
+      sun_moon_times:
+        title: "Sun & Moon Times"
+        titles:
+          civil_twilight: "Civil Twilight:"
+          civil_twilight_end: "Civil Twilight End:"
+          moon: Moon
+          moonrise: "Moonrise:"
+          moonset: "Moonset:"
+          sun: Sun
+          sunrise: "Sunrise:"
+          sunset: "Sunset:"
+      tonight_sky:
+        moon_interference:
+          extreme: Extreme
+          full: Full
+          high: High
+          low: Low
+          moderate: Moderate
+          none: None
+        planets_visible_count:
+          one: "1 planet"
+          other: "%{count} planets"
+        title: 🌌 Tonight's Sky
+        titles:
+          astronomical_twilight: "Astronomical Twilight:"
+          moon_interference: "Moon Interference:"
+          planets_visible: "Planets Visible:"
     models:
       planets:
         mercury:
@@ -24,6 +92,11 @@ en:
           name: Uranus
         neptune:
           name: Neptune
+    shared:
+      location_selector:
+        location_modal:
+          label: Set your location
+    title: Caelus
     units:
       astronomical_unit:
         name: Astronomical Unit

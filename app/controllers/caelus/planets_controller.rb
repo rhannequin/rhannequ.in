@@ -12,7 +12,11 @@ module Caelus
       neptune: Neptune
     }.freeze
     def show
-      @planet = planet_class.new
+      observer = Astronoby::Observer.new(
+        latitude: Astronoby::Angle.from_degrees(51.5074),
+        longitude: Astronoby::Angle.from_degrees(-0.1278)
+      )
+      @planet = planet_class.new(observer: observer)
     end
 
     private

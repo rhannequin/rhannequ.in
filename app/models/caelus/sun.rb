@@ -1,15 +1,15 @@
 # frozen_string_literal: true
 
 module Caelus
-  class Saturn
+  class Sun
     include Planetable
 
     def self.planet_class
-      Astronoby::Saturn
+      Astronoby::Sun
     end
 
     def self.key
-      :saturn
+      :sun
     end
 
     def initialize(observer:, time: Time.now)
