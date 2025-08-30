@@ -16,23 +16,15 @@
 </head>
 <body class="text-gray-900" data-controller="caelus--dark-mode">
   <main class="px-6 py-8 space-y-6">
-    <div class="flex justify-end items-center m-0 gap-4">
-      <%= render "caelus/shared/location_selector" %>
-      <%= render "caelus/shared/dark_mode_toggle" %>
-    </div>
-    <h1 class="text-3xl font-bold text-cosmic">
-      ✨ <%= t "caelus.title" %>
-    </h1>
-    <p class="text-muted-foreground">
-      <%= l(
-        Time.current.localtime(@observer.utc_offset).to_date,
-        format: :long
-      ) %>
-      UTC<%= @observer.utc_offset %>
-      [<%= format_observer_coordinates(@observer) %>]
-    </p>
+    <%= render "caelus/shared/header", observer: @observer %>
     <%= yield %>
+    <hr>
+    <%= render "caelus/shared/footer" %>
   </main>
+
   <turbo-frame id="location_modal"></turbo-frame>
+  <% unless cookie_consent_chosen? %>
+    <%= render "caelus/shared/cookie_consent_banner" %>
+  <% end %>
 </body>
 </html>

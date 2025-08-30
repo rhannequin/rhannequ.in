@@ -93,9 +93,171 @@ en:
         neptune:
           name: Neptune
     shared:
+      cookie_consent_banner:
+        consent_button: Accept
+        no_consent_button: Reject
+        description: We use cookies to provide personalised astronomical
+          calculations and improve your experience.
+        learn_more: Learn more
+      footer:
+        enable_cookies: Enable Cookies
+        made_with_love_html: "Made with &hearts; using %{link} by
+          %{author_link}"
+        privacy_policy: Privacy Policy
       location_selector:
         location_modal:
           label: Set your location
+          title: Click to set your location preferences
+          title_no_cookie_conset: Accept cookies to set location preferences
+    privacy_policy:
+      title: Privacy Policy
+      last_updated: "Last updated: 2025-09-01"
+      introduction: This Privacy Policy explains how we collect, use, and
+        protect your personal data when you use this website.
+      sections:
+        who_we_are:
+          title: 1. Who we are
+          content: Rémy Hannequin, the owner and operator of this website.
+          contact_info: "If you have any questions about this Privacy Policy,
+            you can contact us at:"
+          email: remy.hannequin@gmail.com
+        what_data_we_collect:
+          title: 2. What data we collect
+          intro: "If you choose to submit the location form, we collect and
+            store the following information:"
+          data_points:
+            - Latitude and longitude
+            - Time zone (UTC offset)
+          storage_info: This information is stored in a signed cookie on your
+            device. It is not shared with third parties and is not used for
+            advertising or tracking.
+        why_we_collect:
+          title: 3. Why we collect this data
+          content: "We collect and store this data to provide you with
+            personalised features: adjusting content to your local time zone or
+            location."
+        legal_basis:
+          title: 4. Legal basis for processing
+          content: The legal basis for processing your location data is your
+            consent, which you give by submitting the location form. For cookie
+            consent preferences, we store your choice (accept or reject) to
+            remember your preference and avoid showing the consent banner
+            repeatedly. This is allowed under GDPR as it serves a legitimate
+            interest in providing a better user experience. You can withdraw
+            your consent at any time (see Section 7 below).
+        how_long:
+          title: 5. How long we keep your data
+          content: Your location data is kept only in your browser cookie and is
+            automatically deleted when the cookie expires after 12 months or if
+            you clear your cookies.
+        how_we_protect:
+          title: 6. How we protect your data
+          content: The cookie is signed to prevent tampering. Your data is not
+            transmitted to third parties.
+        your_rights:
+          title: 7. Your rights under GDPR
+          intro: "You have the following rights regarding your personal data:"
+          rights:
+            access: "Access: You can request to know what data we store about
+              you."
+            erasure: "Erasure: You can delete the cookies at any time by
+              clicking this link:"
+            delete_my_data: Delete my data
+            erasure_manual: You can also do it manually in your browser settings.
+            withdraw_consent: "Withdraw consent: You may withdraw your consent
+              by"
+            clearing_cookies: clearing the cookies
+            withdraw_consent_manual: or disabling cookies in your browser.
+            restriction: "Restriction/objection: You may ask us to stop
+              processing your data."
+          contact_exercise: To exercise any of these rights, please contact us
+            at
+        changes:
+          title: 8. Changes to this Privacy Policy
+          content: We may update this Privacy Policy from time to time. We will
+            update the "Last updated" date at the top of this page whenever
+            changes are made.
+        cookies:
+          title: 9. Cookies and Local Storage
+          intro: "This website uses cookies and local storage to store your
+            preferences and settings. We use the following types of storage:"
+          types:
+            essential: "Essential cookies: Required for the website to function
+              properly"
+            preference: "Preference cookies: Store your location and timezone
+              settings for personalised astronomical calculations"
+            consent: "Consent cookies: Remember your cookie consent preference"
+            local_storage: "Local storage: Stores your theme preference
+              (dark/light mode) locally in your browser"
+          details_title: Storage Details
+          table:
+            headers:
+              name: Name
+              purpose: Purpose
+              duration: Duration
+              type: Type
+            cookies:
+              cookie_consent:
+                name: cookie_consent
+                purpose: Stores your cookie consent preference (accept/reject)
+                  to remember your choice
+                duration: 1 year
+                type: Cookie
+              latitude:
+                name: latitude
+                purpose: Stores your latitude for astronomical calculations
+                duration: 1 year
+                type: Cookie
+              longitude:
+                name: longitude
+                purpose: Stores your longitude for astronomical calculations
+                duration: 1 year
+                type: Cookie
+              utc_offset:
+                name: utc_offset
+                purpose: Stores your timezone offset for date/time display
+                duration: 1 year
+                type: Cookie
+              theme:
+                name: theme (localStorage)
+                purpose: Stores your dark/light mode theme preference
+                duration: Until cleared
+                type: Local Storage
+          additional_info: All cookies are first-party cookies and are not
+            shared with third parties. Local storage data is stored locally in
+            your browser and is not transmitted to our servers. You can manage
+            your cookie preferences at any time through your browser settings or
+            by using the data deletion link provided in Section 7. Local storage
+            can be cleared through your browser's developer tools or privacy
+            settings.
+          rejection_title: What happens if you reject cookies?
+          rejection_content: If you reject cookies, the website will still
+            function but will use default location settings (Paris, France) and
+            won't remember your location preferences between visits. However, we
+            do store your rejection preference to avoid showing the consent
+            banner repeatedly. You can still use all features of the website
+            without location cookies. Theme preferences stored in local storage
+            will continue to work even if cookies are rejected.
+        local_storage:
+          title: 10. Local Storage
+          intro: "This website uses browser local storage to enhance your user
+            experience by remembering certain preferences:"
+          purpose: "Local storage is used to store your theme preference (dark
+            or light mode) locally in your browser. This data:"
+          benefits:
+            - "Remembers your theme choice across all pages and browser sessions"
+            - "Provides instant theme switching without page reloads"
+            - "Works offline and doesn't require server communication"
+            - "Is automatically applied when you return to the website"
+          privacy: "Local storage data is:"
+          privacy_points:
+            - "Stored locally on your device only"
+            - "Not transmitted to our servers"
+            - "Not shared with third parties"
+            - "Accessible only by this website"
+          management: "You can manage or clear local storage data through your
+            browser's developer tools or privacy settings. Clearing local
+            storage will reset your theme preference to the default setting."
     title: Caelus
     units:
       astronomical_unit:
