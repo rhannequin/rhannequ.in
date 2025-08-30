@@ -1,7 +1,18 @@
 <div class="lg:col-span-4 space-y-6">
-  <%= render "tonight_sky", observer: @observer %>
-  <%= render "current_moon", moon: @moon %>
-  <%= render "sun_moon_times" %>
+  <%= render(
+    "tonight_sky",
+    observer: @observer,
+    twilight_events: @twilight_events,
+    next_twilight_events: @next_twilight_events,
+    planets: @planets
+  ) %>
+  <%= render "current_moon", moon: @moon, observer: @observer %>
+  <%= render(
+    "sun_moon_times",
+    twilight_events: @twilight_events,
+    sun: @sun,
+    moon: @moon, observer: @observer
+  ) %>
 </div>
 
 <div class="lg:col-span-5 space-y-6">

@@ -72,6 +72,24 @@
               max: 180
             ) %>
           </div>
+          <div>
+            <%= f.label(
+              :utc_offset,
+              t(".form.utc_offset"),
+              class: "text-sm font-medium"
+            ) %>
+            <%= f.select(
+              :utc_offset,
+              options_for_select(utc_offset_options, @utc_offset),
+              {},
+              class: "w-full rounded-md border bg-transparent p-2 mt-2",
+              "data-caelus--location-target": "utc",
+              required: true
+            ) %>
+            <div class="text-xs text-muted-foreground mt-1">
+              <%= t ".form.utc_offset_help" %>
+            </div>
+          </div>
         </div>
         <div class="flex justify-end gap-2 mt-6">
           <button

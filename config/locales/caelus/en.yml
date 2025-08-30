@@ -7,6 +7,8 @@ en:
           cancel: Cancel
           latitude: Latitude
           longitude: Longitude
+          utc_offset: Timezone (UTC Offset)
+          utc_offset_help: Select your timezone to ensure accurate astronomical calculations
           submit: Save Location
         manually: or enter coordinates manually
         title: Set Your Location
@@ -25,9 +27,10 @@ en:
           waxing_gibbous: Waxing Gibbous
         titles:
           age: "Age:"
+          next_phase: "Next major phase:"
           rise: "Rise:"
           set: "Set:"
-          next_phase: "Next major phase:"
+          transit: "Transit:"
       index:
         distances_table:
           distance_from_earth: Distance from Earth

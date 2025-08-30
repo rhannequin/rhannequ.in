@@ -32,13 +32,21 @@
           <div class="flex justify-between">
             <span><%= t ".titles.rise" %></span>
             <span class="text-foreground font-medium">
-              <%= nillable_datetime planet.rts.rising_time, format: :hm %>
+              <%= nillable_datetime(
+                planet.rts.rising_time,
+                utc_offset: observer.utc_offset,
+                format: :hm
+              ) %>
             </span>
           </div>
           <div class="flex justify-between">
             <span><%= t ".titles.set" %></span>
             <span class="text-foreground font-medium">
-              <%= nillable_datetime planet.rts.setting_time, format: :hm %>
+              <%= nillable_datetime(
+                planet.rts.setting_time,
+                utc_offset: observer.utc_offset,
+                format: :hm
+              ) %>
             </span>
           </div>
           <div class="flex justify-between">
@@ -52,7 +60,7 @@
             <span class="text-foreground font-medium">
               <%= t(
                 ".illumination",
-                percentage: planet.illuminated_percentage.round(2)
+                percentage: planet.illuminated_percentage.round
               ) %>
             </span>
           </div>
