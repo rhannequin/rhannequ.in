@@ -1,0 +1,13 @@
+# frozen_string_literal: true
+
+module Constraints
+  class SubdomainConstraint
+    def initialize(subdomain:)
+      @subdomain = subdomain
+    end
+
+    def matches?(request)
+      request.subdomain.present? && request.subdomain == @subdomain
+    end
+  end
+end
