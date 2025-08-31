@@ -110,3 +110,17 @@ body {
 .border-border\/30 {
   border-color: hsl(var(--border) / 0.3);
 }
+
+.link {
+  color: hsl(var(--primary));
+  text-decoration: underline;
+  text-decoration-color: hsl(var(--primary) / 0.3);
+  text-underline-offset: 2px;
+  transition: all 0.15s ease;
+  cursor: pointer;
+}
+
+.link:hover {
+  color: hsl(var(--accent));
+  text-decoration-color: hsl(var(--accent) / 0.5);
+}

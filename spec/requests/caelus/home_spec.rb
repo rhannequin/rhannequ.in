@@ -15,6 +15,7 @@ RSpec.describe "Caelus Home", type: :request do
     context "with a very high latitude location" do
       it "handles edge cases gracefully a returns a successful response" do
         travel_to Time.utc(2025, 8, 30) do
+          post caelus_cookie_consent_path
           patch caelus_location_path,
             params: {latitude: "80.0", longitude: "0.0"}
 
