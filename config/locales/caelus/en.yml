@@ -69,7 +69,7 @@ en:
         planets_visible_count:
           one: "1 planet"
           other: "%{count} planets"
-        title: 🌌 Tonight's Sky
+        title: ⭐ Tonight's Sky
         titles:
           astronomical_twilight: "Astronomical Twilight:"
           moon_interference: "Moon Interference:"
