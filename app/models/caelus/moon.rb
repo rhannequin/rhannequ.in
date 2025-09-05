@@ -60,7 +60,7 @@ module Caelus
 
         (
           (@time - most_recent_passed_new_moon.time) / SECONDS_PER_DAY
-        ).round(2)
+        ).round(1)
       end
     end
 

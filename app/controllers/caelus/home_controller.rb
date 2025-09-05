@@ -20,14 +20,14 @@ module Caelus
 
       @sun = Rails.cache.fetch(
         "sun/#{observer_cache_key}",
-        expires_in: 6.hours
+        expires_in: 1.hour
       ) do
         Sun.new(observer: @observer)
       end
 
       @moon = Rails.cache.fetch(
         "moon/#{observer_cache_key}",
-        expires_in: 6.hours
+        expires_in: 1.hour
       ) do
         Moon.new(observer: @observer)
       end

@@ -11,7 +11,7 @@
       planets: @planets
     ) %>
   <% end %>
-  <%= cache("current_moon/#{observer_cache_key}", expires_in: 6.hours) do %>
+  <%= cache("current_moon/#{observer_cache_key}", expires_in: 1.hour) do %>
     <%= render "current_moon", moon: @moon, observer: @observer %>
   <% end %>
   <%= cache(
