@@ -1,269 +1,452 @@
-<h1 class="text-4xl font-bold mb-4">
-  Hi, I'm Rémy.
-</h1>
+<% content_for :head do %>
+  <style>
+    .about-page .content-link {
+      color: #1e3a8a;
+      text-decoration: underline;
+      font-weight: 500;
+      transition-property: color;
+      transition-duration: 200ms;
+    }
 
-<p class="mb-4">
-  I am a senior developer working at
-  <a
-    href="https://thoughtbot.com/"
-    class="text-blue-900 underline hover:no-underline visited:text-blue-800">
-    thoughtbot</a>.
-</p>
+    .about-page .content-link:hover {
+      text-decoration: none;
+      color: #1d4ed8;
+    }
 
-<p class="mb-4">
-  I work on some open source and I am the creator and maintainer of
-  <a
-    href="https://github.com/rhannequin/astronoby"
-    class="text-blue-900 underline hover:no-underline visited:text-blue-800">
-    Astronoby</a>, a Ruby
-  library to compute astronomical data and events.
-</p>
+    .about-page .content-link:visited {
+      color: #1e40af;
+    }
 
-<p class="mb-4">
-  You can find some of my work on:
-</p>
+    .about-page .simple-link {
+      color: #1e3a8a;
+      text-decoration: underline;
+      transition-property: color;
+      transition-duration: 200ms;
+    }
 
-<ul class="list-disc mx-8 mb-4">
-  <li class="mb-3">
-    <a
-      href="https://github.com/rhannequin"
-      class="text-blue-900 underline hover:no-underline visited:text-blue-800">
-      GitHub
-    </a>
-    <ul class="list-disc mx-8">
-      <li>
-        <a
-          href="https://github.com/rhannequin/astronoby"
-          class="text-blue-900 underline hover:no-underline visited:text-blue-800">
-          Astronoby</a>:
-        Ruby gem for astronomical data and events
-      </li>
-      <li>
-        <a
-          href="https://github.com/rhannequin/ruby-ephem"
-          class="text-blue-900 underline hover:no-underline visited:text-blue-800">
-          Ephem</a>:
-        Ruby integration of NASA/JPL DE and IMCCE INPOP ephemerides
-      </li>
-    </ul>
-  </li>
-  <li class="mb-3">
-    Conferences
-    <ul class="list-disc mx-8">
-      <li>
-        <a
-          href="https://youtu.be/ZYWfiOM-zlY?si=FOnlZMfqangTIIR8"
-          class="text-blue-900 underline hover:no-underline visited:text-blue-800">
-          Modelling the Cosmos in Ruby
-        </a>
-        at Helvetic Ruby 2025
-      </li>
-    </ul>
-  </li>
-  <li class="mb-3">
-    Meet-up presentations
-    <ul class="list-disc mx-8">
-      <li>Ruby Numeric Types at Paris.rb</li>
-      <li>
-        <a
-          href="https://www.youtube.com/watch?v=QyGnBrtopCo"
-          class="text-blue-900 underline hover:no-underline visited:text-blue-800">
-          Value Objects
-        </a>
-        at Paris.rb
-      </li>
-    </ul>
-  </li>
-  <li class="mb-3">
-    <a
-      href="https://thoughtbot.com/blog/authors/remy-hannequin"
-      class="text-blue-900 underline hover:no-underline visited:text-blue-800">
-      thoughtbot blog
-    </a>
-    <ul class="list-disc mx-8">
-      <li>
-        <a
-          href="https://thoughtbot.com/blog/between-immutability-and-memoization-you-might-have-to-choose"
-          class="text-blue-900 underline hover:no-underline visited:text-blue-800">
-          Between immutability and memoization, you might have to choose
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://thoughtbot.com/blog/numeric-data-types-in-ruby-and-when-to-use-them"
-          class="text-blue-900 underline hover:no-underline visited:text-blue-800">
-          Numeric data types in Ruby and when to use them
-        </a>
-      </li>
-      <li>
-        <em>
-          <a
-            href="https://thoughtbot.com/blog/get-consistent-data-from-your-llm-with-json-schema"
-            class="text-blue-900 underline hover:no-underline visited:text-blue-800">
-            Get consistent data from your LLM with JSON Schema
-          </a>
-        </em>
-      </li>
-      <li>
-        <a
-          href="https://thoughtbot.com/blog/a-journey-towards-better-testing-practices"
-          class="text-blue-900 underline hover:no-underline visited:text-blue-800">
-          A journey towards better testing practices
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://thoughtbot.com/blog/set-up-detox-for-end-to-end-testing-in-your-react-native-app"
-          class="text-blue-900 underline hover:no-underline visited:text-blue-800">
-          Set up Detox for end-to-end testing in your React Native App
-        </a>
-      </li>
-      <li>
-        <em>
-          <a
-            href="https://thoughtbot.com/blog/i-have-a-bad-english-accent"
-            class="text-blue-900 underline hover:no-underline visited:text-blue-800">
-            "I have a bad English accent."
-          </a>
-        </em>
-      </li>
-    </ul>
-  </li>
-  <li class="mb-3">
-    <a
-      href="https://dev.to/rhannequin"
-      class="text-blue-900 underline hover:no-underline visited:text-blue-800">
-      Personal blog
-    </a>
-    <ul class="list-disc mx-8">
-      <li>
-        <a
-          href="https://dev.to/rhannequin/how-to-calculate-the-best-days-for-planetary-observation-28k"
-          class="text-blue-900 underline hover:no-underline visited:text-blue-800">
-          How to calculate the best days for planetary observation
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://dev.to/rhannequin/where-on-earth-do-shadows-disappear-finding-the-sub-solar-point-with-ruby-5hm"
-          class="text-blue-900 underline hover:no-underline visited:text-blue-800">
-          Where on Earth do shadows disappear? Finding the sub-solar point with Ruby
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://dev.to/rhannequin/astronoby-v070-planets-and-ephemerides-85b"
-          class="text-blue-900 underline hover:no-underline visited:text-blue-800">
-          Astronoby v0.7.0: Planets and ephemerides
-        </a>
-      <li>
-        <a
-          href="https://dev.to/rhannequin/introducing-ephem-5827"
-          class="text-blue-900 underline hover:no-underline visited:text-blue-800">
-          Introducing Ephem
-        </a>
-      <li>
-        <a
-          href="https://dev.to/rhannequin/i-counted-the-number-of-visible-sunsets-with-ruby-1ap7"
-          class="text-blue-900 underline hover:no-underline visited:text-blue-800">
-          I counted the number of visible sunsets with Ruby
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://dev.to/rhannequin/astronoby-gem-v010-released-4big"
-          class="text-blue-900 underline hover:no-underline visited:text-blue-800">
-          astronoby gem v0.1.0 released
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://dev.to/rhannequin/astronomical-computing-ep-2-4c08"
-          class="text-blue-900 underline hover:no-underline visited:text-blue-800">
-          Astronomical computing – Ep 2 - Angles
-        </a>
-      </li>
-    </ul>
-  </li>
-  <li class="mb-3">
-    Podcasts
-    <ul class="list-disc mx-8">
-      <li>
-        <a
-          href="https://open.spotify.com/episode/4851XCeaUSto2wkA49NcOH"
-          class="text-blue-900 underline hover:no-underline visited:text-blue-800">
-          A Junior, A Senior and I: 14 - On Legacy Code
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://bikeshed.thoughtbot.com/464"
-          class="text-blue-900 underline hover:no-underline visited:text-blue-800">
-          The Bike Shed #464: Modelling the stars with Rémy Hannequin
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://podcast.thoughtbot.com/571"
-          class="text-blue-900 underline hover:no-underline visited:text-blue-800">
-          Giant Robots #571: Space, Software, and Surprises with Rémy Hannequin
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://podcast.thoughtbot.com/559"
-          class="text-blue-900 underline hover:no-underline visited:text-blue-800">
-          Giant Robots #559: The European Accessibility Act
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://podcast.thoughtbot.com/538"
-          class="text-blue-900 underline hover:no-underline visited:text-blue-800">
-          Giant Robots #538: Transforming Therapy with Gaming
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://podcast.thoughtbot.com/537"
-          class="text-blue-900 underline hover:no-underline visited:text-blue-800">
-          Giant Robots #537: Navigating the Startup Ecosystem with Marc Gauthier
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://podcast.thoughtbot.com/536"
-          class="text-blue-900 underline hover:no-underline visited:text-blue-800">
-          Giant Robots #536: Exploring AI and Mental Health with Sara Wilder
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://podcast.thoughtbot.com/530"
-          class="text-blue-900 underline hover:no-underline visited:text-blue-800">
-          Giant Robots #530: Giant Robots On Tour
-        </a>
-      </li>
-    </ul>
-  </li>
-</ul>
+    .about-page .simple-link:hover {
+      text-decoration: none;
+      color: #1d4ed8;
+    }
 
-<p class="mb-4">
-  Feel free to contact me on:
-  <a
-    href="https://github.com/rhannequin"
-    class="text-blue-900 underline hover:no-underline visited:text-blue-800">
-    GitHub</a>,
-  <a
-    href="https://www.linkedin.com/in/rhannequin/"
-    class="text-blue-900 underline hover:no-underline visited:text-blue-800">
-    LinkedIn</a>,
-  <a
-    href="https://ruby.social/@rhannequin"
-    class="text-blue-900 underline hover:no-underline visited:text-blue-800">
-    Mastodon</a>,
-  <a
-    href="https://bsky.app/profile/rhannequin.bsky.social"
-    class="text-blue-900 underline hover:no-underline visited:text-blue-800">
-    Bluesky</a>.
-</p>
+    .about-page .simple-link:visited {
+      color: #1e40af;
+    }
+
+    .about-page .footer-link {
+      color: #6b7280;
+      text-decoration: none;
+      font-weight: 400;
+      transition: color 0.2s ease;
+    }
+
+    .about-page .footer-link:visited {
+      color: #6b7280;
+    }
+
+    .about-page .footer-link:hover,
+    .about-page .footer-link:visited:hover {
+      color: #1f2937;
+    }
+  </style>
+<% end %>
+
+<div class="max-w-4xl mx-auto about-page">
+  <header class="mb-12">
+    <h1 class="text-5xl font-bold mb-6 text-gray-900 leading-tight">
+      Hi, I'm Rémy.
+    </h1>
+
+    <div class="prose prose-lg prose-blue max-w-none space-y-6">
+      <p class="text-xl text-gray-700 leading-relaxed">
+        I am a senior developer working at
+        <a href="https://thoughtbot.com/" class="content-link">
+          thoughtbot</a>.
+      </p>
+
+      <p class="text-xl text-gray-700 leading-relaxed">
+        I work on some open source and I am the creator and maintainer of
+        <a href="https://github.com/rhannequin/astronoby" class="content-link">
+          Astronoby</a>, a Ruby
+        library to compute astronomical data and events.
+      </p>
+
+      <p class="text-xl text-gray-700 leading-relaxed">
+        I also maintain other open-source tools like
+        <a href="https://caelus.rhannequ.in" class="content-link">
+          Caelus</a>,
+        an astronomical dashboard built with Astronoby and Ruby on Rails.
+      </p>
+    </div>
+  </header>
+
+  <section class="mb-12">
+    <h2 class="text-3xl font-semibold mb-8 text-gray-900 border-b-2
+               border-gray-200 pb-3">
+      My work
+    </h2>
+
+    <div class="grid gap-8 lg:grid-cols-2">
+      <div class="space-y-8">
+        <div class="bg-gray-50 rounded-lg p-6">
+          <h3 class="text-xl font-semibold mb-4 text-gray-900
+                     flex items-center">
+            <svg class="w-5 h-5 mr-2" fill="currentColor"
+                 viewBox="0 0 20 20" aria-hidden="true">
+              <path fill-rule="evenodd"
+                    d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18
+                       6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868
+                       -.013-1.703-2.782.605-3.369-1.343-3.369-1.343
+                       -.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608
+                       .069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53
+                       2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338
+                       -2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988
+                       1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27
+                       2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115
+                       2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546
+                       1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028
+                       2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921
+                       .678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58
+                       .688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522
+                       0 10 0z"
+                    clip-rule="evenodd"/>
+            </svg>
+            Open Source Projects
+          </h3>
+          <ul class="space-y-3" role="list">
+            <li>
+              <a
+                href="https://github.com/rhannequin/astronoby"
+                class="content-link"
+              >
+                Astronoby</a>
+              <span class="text-gray-600 block text-sm mt-1">
+                Ruby gem for astronomical data and events
+              </span>
+            </li>
+            <li>
+              <a
+                href="https://github.com/rhannequin/ruby-ephem"
+                class="content-link"
+              >
+                Ephem</a>
+              <span class="text-gray-600 block text-sm mt-1">
+                Ruby integration of NASA/JPL DE and IMCCE INPOP ephemerides
+              </span>
+            </li>
+            <li>
+              <a href="https://caelus.rhannequ.in" class="content-link">
+                Caelus</a>
+              <span class="text-gray-600 block text-sm mt-1">
+                Open-source astronomical dashboard
+                (<a
+                  href="https://github.com/rhannequin/rhannequ.in"
+                  class="simple-link"
+                >source</a>)
+              </span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-gray-50 rounded-lg p-6">
+          <h3 class="text-xl font-semibold mb-4 text-gray-900
+                     flex items-center">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor"
+                 viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2
+                       13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9.5a2 2 0 00-2-2h-2m-4
+                       -3H9M7 16h6M7 8h6v4H7V8z"/>
+            </svg>
+            Conferences & Presentations
+          </h3>
+          <ul class="space-y-3" role="list">
+            <li>
+              <a
+                href="https://youtu.be/ZYWfiOM-zlY?si=FOnlZMfqangTIIR8"
+                class="content-link"
+              >
+                Modelling the Cosmos in Ruby
+              </a>
+              <span class="text-gray-600 block text-sm mt-1">
+                Helvetic Ruby 2025
+              </span>
+            </li>
+            <li>
+              <span class="font-medium text-gray-800">
+                Ruby Numeric Types
+              </span>
+              <span class="text-gray-600 block text-sm mt-1">
+                Paris.rb meetup
+              </span>
+            </li>
+            <li>
+              <a
+                href="https://www.youtube.com/watch?v=QyGnBrtopCo"
+                class="content-link"
+              >
+                Value Objects
+              </a>
+              <span class="text-gray-600 block text-sm mt-1">
+                Paris.rb meetup
+              </span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-gray-50 rounded-lg p-6">
+          <h3 class="text-xl font-semibold mb-4 text-gray-900
+                     flex items-center">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor"
+                 viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4
+                       -8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"/>
+            </svg>
+            Podcasts
+          </h3>
+          <ul class="space-y-2 text-sm" role="list">
+            <li>
+              <a
+                href="https://open.spotify.com/episode/4851XCeaUSto2wkA49NcOH"
+                class="simple-link"
+              >
+                A Junior, A Senior and I: 14 - On Legacy Code
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://bikeshed.thoughtbot.com/464"
+                class="simple-link">
+                The Bike Shed #464: Modelling the stars with Rémy Hannequin
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://podcast.thoughtbot.com/571"
+                class="simple-link">
+                Giant Robots #571: Space, Software, and Surprises with Rémy
+                Hannequin
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://podcast.thoughtbot.com/559"
+                class="simple-link">
+                Giant Robots #559: The European Accessibility Act
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://podcast.thoughtbot.com/538"
+                class="simple-link">
+                Giant Robots #538: Transforming Therapy with Gaming
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://podcast.thoughtbot.com/537"
+                class="simple-link">
+                Giant Robots #537: Navigating the Startup Ecosystem with
+                Marc Gauthier
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://podcast.thoughtbot.com/536"
+                class="simple-link">
+                Giant Robots #536: Exploring AI and Mental Health with Sara
+                Wilder
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://podcast.thoughtbot.com/530"
+                class="simple-link">
+                Giant Robots #530: Giant Robots On Tour
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="space-y-8">
+        <div class="bg-gray-50 rounded-lg p-6">
+          <h3 class="text-xl font-semibold mb-4 text-gray-900
+                     flex items-center">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor"
+                 viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0
+                       113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/>
+            </svg>
+            <a
+              href="https://thoughtbot.com/blog/authors/remy-hannequin"
+              class="simple-link"
+            >
+              thoughtbot Blog
+            </a>
+          </h3>
+          <ul class="space-y-2 text-sm" role="list">
+            <li>
+              <a
+                href="https://thoughtbot.com/blog/between-immutability-and-memoization-you-might-have-to-choose"
+                class="simple-link">
+                Between immutability and memoization, you might have to choose
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://thoughtbot.com/blog/numeric-data-types-in-ruby-and-when-to-use-them"
+                class="simple-link">
+                Numeric data types in Ruby and when to use them
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://thoughtbot.com/blog/get-consistent-data-from-your-llm-with-json-schema"
+                class="text-blue-900 underline hover:no-underline
+                       visited:text-blue-800 transition-colors duration-200
+                       hover:text-blue-700 italic">
+                Get consistent data from your LLM with JSON Schema
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://thoughtbot.com/blog/a-journey-towards-better-testing-practices"
+                class="simple-link">
+                A journey towards better testing practices
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://thoughtbot.com/blog/set-up-detox-for-end-to-end-testing-in-your-react-native-app"
+                class="simple-link">
+                Set up Detox for end-to-end testing in your React Native App
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://thoughtbot.com/blog/i-have-a-bad-english-accent"
+                class="text-blue-900 underline hover:no-underline
+                       visited:text-blue-800 transition-colors duration-200
+                       hover:text-blue-700 italic">
+                "I have a bad English accent."
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-gray-50 rounded-lg p-6">
+          <h3 class="text-xl font-semibold mb-4 text-gray-900
+                     flex items-center">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor"
+                 viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0
+                       113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/>
+            </svg>
+            <a href="https://dev.to/rhannequin" class="simple-link">
+              Personal Blog
+            </a>
+          </h3>
+          <ul class="space-y-2 text-sm" role="list">
+            <li>
+              <a
+                href="https://dev.to/rhannequin/how-to-calculate-the-best-days-for-planetary-observation-28k"
+                class="simple-link"
+              >
+                How to calculate the best days for planetary observation
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://dev.to/rhannequin/where-on-earth-do-shadows-disappear-finding-the-sub-solar-point-with-ruby-5hm"
+                class="simple-link"
+              >
+                Where on Earth do shadows disappear? Finding the sub-solar
+                point with Ruby
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://dev.to/rhannequin/astronoby-v070-planets-and-ephemerides-85b"
+                class="simple-link"
+              >
+                Astronoby v0.7.0: Planets and ephemerides
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://dev.to/rhannequin/introducing-ephem-5827"
+                class="simple-link"
+              >
+                Introducing Ephem
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://dev.to/rhannequin/i-counted-the-number-of-visible-sunsets-with-ruby-1ap7"
+                class="simple-link"
+              >
+                I counted the number of visible sunsets with Ruby
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://dev.to/rhannequin/astronoby-gem-v010-released-4big"
+                class="simple-link"
+              >
+                astronoby gem v0.1.0 released
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://dev.to/rhannequin/astronomical-computing-ep-5-locate-an-object-in-the-sky-i5e"
+                class="simple-link"
+              >
+                Astronomical computing - Ep 5 - Locate an object in the sky
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://dev.to/rhannequin/astronomical-computing-ep-2-4c08"
+                class="simple-link"
+              >
+                Astronomical computing - Ep 2 - Angles
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pt-12 border-t border-gray-200">
+    <div class="text-center">
+      <h2 class="text-xl font-medium mb-8 text-gray-700">Get in touch</h2>
+
+      <div class="flex justify-center space-x-8 text-gray-600">
+        <a href="https://github.com/rhannequin" class="footer-link">
+          GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/rhannequin/" class="footer-link">
+          LinkedIn
+        </a>
+        <a href="https://ruby.social/@rhannequin" class="footer-link">
+          Mastodon
+        </a>
+        <a
+          href="https://bsky.app/profile/rhannequin.bsky.social"
+          class="footer-link"
+        >
+          Bluesky
+        </a>
+      </div>
+    </div>
+  </section>
+</div>
