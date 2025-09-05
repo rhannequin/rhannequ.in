@@ -43,8 +43,8 @@ module Caelus
     end
 
     def observer_cache_key
-      "#{@observer.latitude.degrees}/" \
-        "#{@observer.longitude.degrees}/" \
+      "#{@observer.latitude.degrees.round(3)}/" \
+        "#{@observer.longitude.degrees.round(3)}/" \
         "#{@observer.utc_offset}"
     end
 

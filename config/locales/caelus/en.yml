@@ -96,8 +96,8 @@ en:
       cookie_consent_banner:
         consent_button: Accept
         no_consent_button: Reject
-        description: We use cookies to provide personalised astronomical
-          calculations and improve your experience.
+        description: We use cookies to remember your stargazing location for
+          personalised sky data and observations.
         learn_more: Learn more
       footer:
         enable_cookies: Enable Cookies
