@@ -12,7 +12,7 @@ RSpec.describe Caelus::Moon, type: :model do
         .new(observer: observer, time: time)
         .age
 
-      expect(age).to eq(3.75)
+      expect(age).to eq(3.7)
     end
 
     context "when it is right before a new moon" do
@@ -24,7 +24,7 @@ RSpec.describe Caelus::Moon, type: :model do
           .new(observer: observer, time: time)
           .age
 
-        expect(age).to eq(29.45)
+        expect(age).to eq(29.5)
       end
     end
 

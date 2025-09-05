@@ -9,7 +9,7 @@ RSpec.describe Caelus::MoonPhaseSvg, type: :model do
         moon = instance_double(
           Caelus::Moon,
           phase_angle: Astronoby::Angle.from_degrees(125.5),
-          age: 4.75
+          age: 4.7
         )
         moon_phase_svg = Caelus::MoonPhaseSvg.new(moon)
 
@@ -24,20 +24,20 @@ RSpec.describe Caelus::MoonPhaseSvg, type: :model do
           >
             <defs>
               <clipPath>
-                <circle cx="200.0" cy="200.0" r="179.5"/>
+                <circle cx="200.0" cy="200.0" r="179.0"/>
               </clipPath>
             </defs>
             <circle
               cx="200.0"
               cy="200.0"
-              r="179.5"
-              fill="#f0f0e0"
-              stroke="#444"
-              stroke-width="1"
+              r="179.0"
+              fill="#faf8f0"
+              stroke="#666"
+              stroke-width="2"
             />
             <path
-              d="M 200.0 20.5 A 179.5 179.5 0 0 0 200.0 379.5 A 104.23618055011369 179.5 0 1 0 200.0 20.5"
-              fill="#222"
+              d="M 200.0 21.0 A 179.0 179.0 0 0 0 200.0 379.0 A 103.94582907225822 179.0 0 1 0 200.0 21.0"
+              fill="#1a1a1a"
             />
          </svg>
 SVG
@@ -71,16 +71,16 @@ SVG
                 <circle
                   cx="200.0"
                   cy="200.0"
-                  r="179.5"/>
+                  r="179.0"/>
               </clipPath>
             </defs>
             <circle
               cx="200.0"
               cy="200.0"
-              r="179.5"
-              fill="#f0f0e0"
-              stroke="#444"
-              stroke-width="1"
+              r="179.0"
+              fill="#faf8f0"
+              stroke="#666"
+              stroke-width="2"
             />
           </svg>
 SVG
@@ -96,7 +96,7 @@ SVG
         moon = instance_double(
           Caelus::Moon,
           phase_angle: Astronoby::Angle.from_degrees(179.5),
-          age: 29.57
+          age: 29.6
         )
         moon_phase_svg = Caelus::MoonPhaseSvg.new(moon)
 
@@ -114,20 +114,20 @@ SVG
                 <circle
                   cx="200.0"
                   cy="200.0"
-                  r="179.5"/>
+                  r="179.0"/>
               </clipPath>
             </defs>
             <circle
               cx="200.0"
               cy="200.0"
-              r="179.5"
-              fill="#f0f0e0"
-              stroke="#444"
-              stroke-width="1"
+              r="179.0"
+              fill="#faf8f0"
+              stroke="#666"
+              stroke-width="2"
             />
             <path
-              d="M 20.5,200.0 a 179.5,179.5 0 1,0 359.0,0 a 179.5,179.5 0 1,0 -359.0,0"
-              fill="#222"
+              d="M 21.0,200.0 a 179.0,179.0 0 1,0 358.0,0 a 179.0,179.0 0 1,0 -358.0,0"
+              fill="#1a1a1a"
             />
           </svg>
 SVG
@@ -143,7 +143,7 @@ SVG
         moon = instance_double(
           Caelus::Moon,
           phase_angle: Astronoby::Angle.from_degrees(30),
-          age: 17.75
+          age: 17.7
         )
         moon_phase_svg = Caelus::MoonPhaseSvg.new(moon)
 
@@ -158,20 +158,20 @@ SVG
           >
             <defs>
               <clipPath>
-                <circle cx="200.0" cy="200.0" r="179.5"/>
+                <circle cx="200.0" cy="200.0" r="179.0"/>
               </clipPath>
             </defs>
             <circle
               cx="200.0"
               cy="200.0"
-              r="179.5"
-              fill="#f0f0e0"
-              stroke="#444"
-              stroke-width="1"
+              r="179.0"
+              fill="#faf8f0"
+              stroke="#666"
+              stroke-width="2"
             />
             <path
-              d="M 200.0 20.5 A 179.5 179.5 0 0 1 200.0 379.5 A 155.45155997930675 179.5 0 0 0 200.0 20.5"
-              fill="#222"
+              d="M 200.0 21.0 A 179.0 179.0 0 0 1 200.0 379.0 A 155.01854727741454 179.0 0 0 0 200.0 21.0"
+              fill="#1a1a1a"
             />
          </svg>
 SVG
