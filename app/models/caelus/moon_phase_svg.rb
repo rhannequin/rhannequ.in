@@ -4,10 +4,10 @@ module Caelus
   class MoonPhaseSvg
     SYNODIC_MONTH_DAYS = 29.530588853
     HALF_SYNODIC_PERIOD = SYNODIC_MONTH_DAYS / 2.0
-    DEFAULT_MOON_COLOR = "#f0f0e0"
-    DEFAULT_SHADOW_COLOR = "#222"
-    DEFAULT_OUTLINE_COLOR = "#444"
-    DEFAULT_OUTLINE_WIDTH = 1
+    DEFAULT_MOON_COLOR = "#faf8f0"
+    DEFAULT_SHADOW_COLOR = "#1a1a1a"
+    DEFAULT_OUTLINE_COLOR = "#666"
+    DEFAULT_OUTLINE_WIDTH = 2
 
     def initialize(moon, size: 200, options: {})
       @phase_angle = moon.phase_angle
