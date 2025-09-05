@@ -9,7 +9,10 @@ module Caelus
 
     layout "caelus"
 
-    helper_method :cookie_consent_given?, :cookie_consent_chosen?
+    helper_method :cookie_consent_given?,
+      :cookie_consent_chosen?,
+      :observer_cache_key,
+      :observer_end_of_day
 
     private
 
@@ -37,6 +40,16 @@ module Caelus
         longitude: Astronoby::Angle.from_degrees(longitude),
         utc_offset: utc_offset
       )
+    end
+
+    def observer_cache_key
+      "#{@observer.latitude.degrees}/" \
+        "#{@observer.longitude.degrees}/" \
+        "#{@observer.utc_offset}"
+    end
+
+    def observer_end_of_day
+      Time.now.getlocal(@observer.utc_offset).end_of_day
     end
 
     def cookie_consent_given?

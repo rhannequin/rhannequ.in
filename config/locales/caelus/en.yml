@@ -101,8 +101,8 @@ en:
         learn_more: Learn more
       footer:
         enable_cookies: Enable Cookies
-        made_with_love_html: "Made with &hearts; using %{link} by
-          %{author_link}"
+        made_with_love_html: "Made with &hearts; by %{author_link}
+          using %{link}"
         privacy_policy: Privacy Policy
       location_selector:
         location_modal:
