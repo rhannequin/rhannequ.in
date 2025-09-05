@@ -87,6 +87,7 @@ body {
 
 /* Cosmic Text Gradients */
 .text-cosmic {
+  text-shadow: 0 0 12px hsl(var(--accent) / 0.3);
   background: var(--gradient-cosmic);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -123,4 +124,8 @@ body {
 .link:hover {
   color: hsl(var(--accent));
   text-decoration-color: hsl(var(--accent) / 0.5);
+}
+
+h1, h2, h3 {
+  letter-spacing: 0.02em;
 }

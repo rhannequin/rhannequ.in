@@ -12,6 +12,10 @@ module Caelus
       :mars
     end
 
+    def self.symbol
+      "♂"
+    end
+
     def initialize(observer:, time: Time.now)
       @observer = observer
       @time = time

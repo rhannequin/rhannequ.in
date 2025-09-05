@@ -12,6 +12,10 @@ module Caelus
       :saturn
     end
 
+    def self.symbol
+      "♄"
+    end
+
     def initialize(observer:, time: Time.now)
       @observer = observer
       @time = time
