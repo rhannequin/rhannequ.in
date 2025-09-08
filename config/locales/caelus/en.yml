@@ -1,5 +1,23 @@
 en:
   caelus:
+    cardinal_direction:
+      north: N
+      north_east: NE
+      east: E
+      south_east: SE
+      south: S
+      south_west: SW
+      west: W
+      north_west: NW
+      with_symbols:
+        north: ↑ N
+        north_east: ↗ NE
+        east: → E
+        south_east: ↘ SE
+        south: ↓ S
+        south_west: ↙ SW
+        west: ← W
+        north_west: ↖ NW
     location:
       edit:
         current: "Current: %{latitude}°, %{longitude}°"
@@ -8,7 +26,8 @@ en:
           latitude: Latitude
           longitude: Longitude
           utc_offset: Timezone (UTC Offset)
-          utc_offset_help: Select your timezone to ensure accurate astronomical calculations
+          utc_offset_help: Select your timezone to ensure accurate astronomical
+            calculations
           submit: Save Location
         manually: or enter coordinates manually
         title: Set Your Location
@@ -16,15 +35,7 @@ en:
     home:
       current_moon:
         age: "%{age} days"
-        phases:
-          first_quarter: First Quarter
-          full_moon: Full Moon
-          last_quarter: Last Quarter
-          new_moon: New Moon
-          waning_crescent: Waning Crescent
-          waning_gibbous: Waning Gibbous
-          waxing_crescent: Waxing Crescent
-          waxing_gibbous: Waxing Gibbous
+        moon_link: See Moon details
         titles:
           age: "Age:"
           next_phase: "Next major phase:"
@@ -92,6 +103,81 @@ en:
           name: Uranus
         neptune:
           name: Neptune
+    moon:
+      coordinates:
+        declination: Declination
+        ecliptic_latitude: Ecliptic Latitude
+        ecliptic_longitude: Ecliptic Longitude
+        right_ascension: Right Ascension
+        title: 📐 Coordinates
+      distances:
+        apogee: Apogee
+        perigee: Perigee
+        current: Current
+        next_apogee: Next Apogee
+        next_perigee: Next Perigee
+        title: 📏 Distance
+      hero:
+        age: "%{age} days old"
+        altitude:
+          negative: Below horizon
+          positive: Above horizon
+        distance:
+          moving_away: ⇠ Moving away
+          moving_closer: Moving closer ⇢
+        titles:
+          altitude: Altitude
+          angular_size: Angular Size
+          azimuth: Azimuth
+          constellation: Constellation
+          distance: Distance
+          next_phase: Next Phase
+      lunar_calendars:
+        title: 📅 Lunar Calendars
+        titles:
+          chinese_calendar: Chinese Calendar
+          hebrew_calendar: Hebrew Calendar
+          islamic_calendar: Islamic Calendar
+      phases:
+        first_quarter: First Quarter
+        full_moon: Full Moon
+        last_quarter: Last Quarter
+        new_moon: New Moon
+        waning_crescent: Waning Crescent
+        waning_gibbous: Waning Gibbous
+        waxing_crescent: Waxing Crescent
+        waxing_gibbous: Waxing Gibbous
+      phase_emojis:
+        first_quarter: 🌓
+        full_moon: 🌕
+        last_quarter: 🌗
+        new_moon: 🌑
+        waning_crescent: 🌘
+        waning_gibbous: 🌖
+        waxing_crescent: 🌒
+        waxing_gibbous: 🌔
+      physical_characteristics:
+        escape_velocity: Escape Velocity
+        gravity: Gravity
+        mass: Mass
+        mean_radius: Mean Radius
+        orbital_period: Orbital Period
+        orbital_speed: Orbital Speed
+        tilt: Tilt
+        title: 🚀 Physical Characteristics
+      show:
+        title: Moon
+      this_week:
+        title: 📆 This Week
+      today:
+        altitude: "Alt:"
+        azimuth: "Az:"
+        moonrise: Moonrise
+        moonset: Moonset
+        title: ⏰ Today's Moon
+        transit: Transit
+      upcoming_phases:
+        title: 🌙 Upcoming Phases
     shared:
       cookie_consent_banner:
         consent_button: Accept
@@ -163,7 +249,8 @@ en:
             erasure: "Erasure: You can delete the cookies at any time by
               clicking this link:"
             delete_my_data: Delete my data
-            erasure_manual: You can also do it manually in your browser settings.
+            erasure_manual: You can also do it manually in your browser
+              settings.
             withdraw_consent: "Withdraw consent: You may withdraw your consent
               by"
             clearing_cookies: clearing the cookies
@@ -258,11 +345,40 @@ en:
           management: "You can manage or clear local storage data through your
             browser's developer tools or privacy settings. Clearing local
             storage will reset your theme preference to the default setting."
+      show:
+        title: Privacy Policy
     title: Caelus
     units:
+      arcminute:
+        name: Arcminute
+        symbol: ′
       astronomical_unit:
         name: Astronomical Unit
-        symbol: AU
+        symbol: "\u00A0AU"
+      day:
+        name: Day
+        symbol: "\u00A0days"
+      degree:
+        name: Degree
+        symbol: °
+      kilometer:
+        name: Kilometer
+        symbol: "\u00A0km"
       km_per_second:
-        name: Kilometers per second
-        symbol: km/s
+        name: Kilometer per second
+        symbol: "\u00A0km/s"
+      m_per_second_squared:
+        name: Meter per second squared
+        symbol: "\u00A0m/s²"
+  date:
+    formats:
+      abbreviated_day: "%a"
+      full_month_short: "%B %d"
+  number:
+    format:
+      delimiter: "\u202F"
+      separator: "."
+  time:
+    formats:
+      hm: "%H:%M"
+      utc_hm: "%H:%M UTC"

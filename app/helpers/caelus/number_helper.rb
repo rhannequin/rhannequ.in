@@ -2,13 +2,27 @@
 
 module Caelus
   module NumberHelper
-    def format_number(number, precision: 2, unit: nil)
-      formatted_number = format("%.#{precision}f", number)
-      if unit
-        if [:au, :kmps].include?(unit)
-          unit_str_key = {au: "astronomical_unit", kmps: "kilometers_per_second"}[unit]
-          formatted_number += " #{I18n.t("caelus.units.#{unit_str_key}.symbol")}"
-        end
+    SUPPORTED_UNITS = {
+      arcminute: "arcminute",
+      au: "astronomical_unit",
+      day: "day",
+      degree: "degree",
+      km: "kilometer",
+      kmps: "km_per_second",
+      mps2: "m_per_second_squared"
+    }.freeze
+
+    def format_number(number, precision: nil, unit: nil)
+      formatted_number = if precision.nil?
+        ActiveSupport::NumberHelper.number_to_delimited(number.round.to_i)
+      else
+        ActiveSupport::NumberHelper
+          .number_to_delimited(sprintf("%.#{precision}f", number))
+      end
+
+      if SUPPORTED_UNITS.key?(unit)
+        unit_str_key = SUPPORTED_UNITS[unit]
+        formatted_number += I18n.t("caelus.units.#{unit_str_key}.symbol")
       end
       formatted_number
     end
