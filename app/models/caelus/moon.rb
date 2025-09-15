@@ -23,6 +23,12 @@ module Caelus
       Angle.from_degrees(168), Angle.from_degrees(192)
     ].freeze
 
+    AXIAL_TILT_DEGREES = 5.145
+    ESCAPE_VELOCITY_KMPS = 2.38
+    GRAVITY_MPS2 = 1.62
+    MEAN_RADIUS_KM = 1737.4
+    ORBITAL_PERIOD_DAYS = 27.321661
+
     include Planetable
 
     def self.planet_class
@@ -58,9 +64,7 @@ module Caelus
             moon_phase.time <= @time && moon_phase.phase == :new_moon
           end.max_by(&:time)
 
-        (
-          (@time - most_recent_passed_new_moon.time) / SECONDS_PER_DAY
-        ).round(1)
+        (@time - most_recent_passed_new_moon.time) / SECONDS_PER_DAY
       end
     end
 
@@ -98,6 +102,11 @@ module Caelus
           .select { |moon_phase| moon_phase.time > @time }
           .min_by(&:time)
       end
+    end
+
+    def velocity
+      @velocity ||=
+        (planet.geometric.velocity - current_earth_geometric.velocity).magnitude
     end
   end
 end

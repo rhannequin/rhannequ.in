@@ -8,7 +8,7 @@
     caelus_root_path,
     class: "text-cosmic hover:text-accent transition-all duration-150 ease-in-out"
   ) do %>
-    ✨ <%= t "caelus.title" %>
+    ✨ <%= content_for?(:title) ? yield(:title) : t("caelus.title") %>
   <% end %>
 </h1>
 

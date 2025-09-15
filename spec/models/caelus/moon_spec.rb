@@ -12,7 +12,7 @@ RSpec.describe Caelus::Moon, type: :model do
         .new(observer: observer, time: time)
         .age
 
-      expect(age).to eq(3.7)
+      expect(age.round(1)).to eq(3.7)
     end
 
     context "when it is right before a new moon" do
@@ -24,7 +24,7 @@ RSpec.describe Caelus::Moon, type: :model do
           .new(observer: observer, time: time)
           .age
 
-        expect(age).to eq(29.5)
+        expect(age.round(1)).to eq(29.5)
       end
     end
 
@@ -37,7 +37,7 @@ RSpec.describe Caelus::Moon, type: :model do
           .new(observer: observer, time: time)
           .age
 
-        expect(age).to eq(0.0)
+        expect(age.round(1)).to eq(0.0)
       end
     end
   end
@@ -225,6 +225,20 @@ RSpec.describe Caelus::Moon, type: :model do
         expect(next_phase.phase).to eq(:full_moon)
         expect(next_phase.time.to_date).to eq(Date.new(2025, 9, 7))
       end
+    end
+  end
+
+  describe "#velocity" do
+    it "returns the geometric geocentric velocity as a Asronoby::Velocity" do
+      observer = double
+      time = Time.utc(2025, 9, 14)
+
+      velocity = described_class
+        .new(observer: observer, time: time)
+        .velocity
+
+      expect(velocity).to be_a(Astronoby::Velocity)
+      expect(velocity.kilometers_per_second.round(2)).to eq(1.06)
     end
   end
 end

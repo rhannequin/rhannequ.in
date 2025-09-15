@@ -21,18 +21,26 @@ module Caelus
     end
 
     included do
-      delegate :constellation, to: :planet
+      attr_reader :time
+
+      delegate :angular_diameter,
+        :apparent,
+        :astrometric,
+        :constellation,
+        :approaching_primary?,
+        to: :planet
 
       def distance_from_earth
-        @distance_from_earth ||= planet.astrometric.distance
+        @distance_from_earth ||= (planet.geometric.position - current_earth_geometric.position)
+          .magnitude
       end
 
       def magnitude
-        @magnitude ||= planet.apparent_magnitude.round(2)
+        @magnitude ||= planet.apparent_magnitude
       end
 
       def illuminated_percentage
-        @illuminated_percentage ||= (planet.illuminated_fraction * 100).round
+        @illuminated_percentage ||= planet.illuminated_fraction * 100
       end
 
       def rts
@@ -51,10 +59,21 @@ module Caelus
         )
       end
 
+      def topocentric
+        @topocentric ||= planet.observed_by(@observer)
+      end
+
       private
 
       def planet
         @planet ||= self.class.planet_class.new(
+          ephem: SPK.inpop19a,
+          instant: Astronoby::Instant.from_time(@time)
+        )
+      end
+
+      def current_earth_geometric
+        @current_earth_geometric ||= Astronoby::Earth.geometric(
           ephem: SPK.inpop19a,
           instant: Astronoby::Instant.from_time(@time)
         )

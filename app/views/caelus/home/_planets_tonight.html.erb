@@ -21,7 +21,7 @@
           <div class="flex justify-between">
             <span><%= t ".titles.magnitude" %></span>
             <span class="text-foreground font-medium">
-              <%= planet.magnitude %>
+              <%= format_number planet.magnitude, precision: 2 %>
             </span>
           </div>
           <div class="flex justify-between">
@@ -53,7 +53,11 @@
           <div class="flex justify-between">
             <span><%= t ".titles.distance" %></span>
             <span class="text-foreground font-medium">
-              <%= format_number planet.distance_from_earth.au, unit: :au %>
+              <%= format_number(
+                planet.distance_from_earth.au,
+                unit: :au,
+                precision: 2
+              ) %>
             </span>
           </div>
           <div class="flex justify-between">

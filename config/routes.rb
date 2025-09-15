@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
     resource :location, only: [:edit, :update], controller: :location
     resources :planets, only: [:show], param: :id
+    resource :moon, only: [:show], controller: :moon
     resource :privacy_policy, only: :show, controller: :privacy_policy
     resource :cookie_consent,
       only: [:create, :destroy],
