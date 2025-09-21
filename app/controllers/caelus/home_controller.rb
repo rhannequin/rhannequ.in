@@ -39,7 +39,7 @@ module Caelus
         Astronoby::TwilightCalculator.new(
           observer: @observer,
           ephem: SPK.inpop19a
-        ).event_on(Date.today)
+        ).event_on(Date.today, utc_offset: @observer.utc_offset)
       end
 
       @next_twilight_events = Rails.cache.fetch(

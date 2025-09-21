@@ -12,7 +12,8 @@ module Caelus
     helper_method :cookie_consent_given?,
       :cookie_consent_chosen?,
       :observer_cache_key,
-      :observer_end_of_day
+      :observer_end_of_day,
+      :observer_end_of_year
 
     private
 
@@ -50,6 +51,10 @@ module Caelus
 
     def observer_end_of_day
       Time.now.getlocal(@observer.utc_offset).end_of_day
+    end
+
+    def observer_end_of_year
+      Time.now.getlocal(@observer.utc_offset).end_of_year
     end
 
     def cookie_consent_given?

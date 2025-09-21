@@ -9,7 +9,7 @@ module Caelus
     end
 
     def update
-      redirect_to caelus_root_path unless cookie_consent_given?
+      return redirect_to caelus_root_path unless cookie_consent_given?
 
       cookies.permanent.signed[:latitude] = params[:latitude]
       cookies.permanent.signed[:longitude] = params[:longitude]

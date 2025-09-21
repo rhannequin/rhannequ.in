@@ -18,6 +18,185 @@ en:
         south_west: ↙ SW
         west: ← W
         north_west: ↖ NW
+    constellation:
+      human_name:
+        and: Andromeda
+        ant: Antlia
+        aps: Apus
+        aqr: Aquarius
+        aql: Aquila
+        ara: Ara
+        ari: Aries
+        aur: Auriga
+        boo: Boötes
+        cae: Caelum
+        cam: Camelopardalis
+        cnc: Cancer
+        cvn: Canes Venatici
+        cmi: Canis Minor
+        cma: Canis Major
+        cap: Capricornus
+        car: Carina
+        cas: Cassiopeia
+        cen: Centaurus
+        cep: Cepheus
+        cet: Cetus
+        cha: Chamaeleon
+        cir: Circinus
+        col: Columba
+        com: Coma Berenices
+        cra: Corona Australis
+        crb: Corona Borealis
+        crv: Corvus
+        crt: Crater
+        cru: Crux
+        cyg: Cygnus
+        del: Delphinus
+        dor: Dorado
+        dra: Draco
+        equ: Equuleus
+        eri: Eridanus
+        for: Fornax
+        gem: Gemini
+        gru: Grus
+        her: Hercules
+        hor: Horologium
+        hya: Hydra
+        hyi: Hydrus
+        ind: Indus
+        lac: Lacerta
+        leo: Leo
+        lmi: Leo Minor
+        lep: Lepus
+        lib: Libra
+        lup: Lupus
+        lyn: Lynx
+        lyr: Lyra
+        men: Mensa
+        mic: Microscopium
+        mon: Monoceros
+        mus: Musca
+        nor: Norma
+        oct: Octans
+        oph: Ophiuchus
+        ori: Orion
+        pav: Pavo
+        peg: Pegasus
+        per: Perseus
+        phe: Phoenix
+        pic: Pictor
+        psc: Pisces
+        psa: Piscis Austrinus
+        pup: Puppis
+        pyx: Pyxis
+        ret: Reticulum
+        sge: Sagitta
+        sgr: Sagittarius
+        sco: Scorpius
+        scl: Sculptor
+        sct: Scutum
+        ser: Serpens
+        sex: Sextans
+        tau: Taurus
+        tel: Telescopium
+        tri: Triangulum
+        tra: Triangulum Australe
+        tuc: Tucana
+        uma: Ursa Major
+        umi: Ursa Minor
+        vel: Vela
+        vir: Virgo
+        vol: Volans
+        vul: Vulpecula
+      emoji:
+        and: ⭐
+        ant: 🔧
+        aps: 🐦
+        aqr: ♒
+        aql: 🦅
+        ara: 🏺
+        ari: ♈
+        aur: 🛡️
+        boo: 🐂
+        cae: 🔨
+        cam: 🦒
+        cnc: ♋
+        cvn: 🐕
+        cmi: 🐕
+        cma: 🐕
+        cap: ♑
+        car: ⚓
+        cas: 👑
+        cen: 🏹
+        cep: 👑
+        cet: 🐋
+        cha: 🦎
+        cir: 🎯
+        col: 🕊️
+        com: 💇‍♀️
+        cra: 👑
+        crb: 👑
+        crv: 🐦‍⬛
+        crt: 🏺
+        cru: ✝️
+        cyg: 🦢
+        del: 🐬
+        dor: 🐟
+        dra: 🐉
+        equ: 🐴
+        eri: 🌊
+        for: 🔥
+        gem: ♊
+        gru: 🦆
+        her: 💪
+        hor: ⏰
+        hya: 🐍
+        hyi: 🐍
+        ind: 🏹
+        lac: 🦎
+        leo: ♌
+        lmi: 🦁
+        lep: 🐰
+        lib: ♎
+        lup: 🐺
+        lyn: 🐱
+        lyr: 🎵
+        men: 🏔️
+        mic: 🔬
+        mon: 🦄
+        mus: 🪰
+        nor: 📏
+        oct: 🧭
+        oph: 🐍
+        ori: 🏹
+        pav: 🦚
+        peg: 🐎
+        per: ⚔️
+        phe: 🔥
+        pic: 🎨
+        psc: ♓
+        psa: 🐟
+        pup: ⚓
+        pyx: 📦
+        ret: 🕸️
+        sge: 🏹
+        sgr: ♐
+        sco: ♏
+        scl: 🗿
+        sct: 🛡️
+        ser: 🐍
+        sex: 🔭
+        tau: ♉
+        tel: 🔭
+        tri: 🔺
+        tra: 🔺
+        tuc: 🦜
+        uma: 🐻
+        umi: 🐻
+        vel: ⛵
+        vir: ♍
+        vol: 🐟
+        vul: 🦊
     location:
       edit:
         current: "Current: %{latitude}°, %{longitude}°"
@@ -119,9 +298,6 @@ en:
         title: 📏 Distance
       hero:
         age: "%{age} days old"
-        altitude:
-          negative: Below horizon
-          positive: Above horizon
         distance:
           moving_away: ⇠ Moving away
           moving_closer: Moving closer ⇢
@@ -178,7 +354,18 @@ en:
         transit: Transit
       upcoming_phases:
         title: 🌙 Upcoming Phases
+    seasons:
+      december_solstice: December Solstice
+      june_solstice: June Solstice
+      march_equinox: March Equinox
+      september_equinox: September Equinox
     shared:
+      altitude:
+        abbr_title: "Alt:"
+        negative: Below horizon
+        positive: Above horizon
+      azimuth:
+        abbr_title: "Az:"
       cookie_consent_banner:
         consent_button: Accept
         no_consent_button: Reject
@@ -195,6 +382,84 @@ en:
           label: Set your location
           title: Click to set your location preferences
           title_no_cookie_conset: Accept cookies to set location preferences
+    sun:
+      calendar:
+        day_of_year: Day of Year
+        julian_day: Julian Day
+        modified_julian_day: Modified Julian Day
+        title: 📅 Solar Calendars
+        week: Week
+        week_of_year: Week of Year
+      coordinates:
+        declination: Declination
+        ecliptic: Ecliptic
+        equatorial: Equatorial
+        hour_angle: Hour Angle
+        latitude: Latitude
+        longitude: Longitude
+        right_ascension: Right Ascension
+        title: 📐 Coordinates
+      distances:
+        aphelion: Aphelion
+        current: Current
+        next_aphelion: Next Aphelion
+        next_perihelion: Next Perihelion
+        perihelion: Perihelion
+        title: 📏 Distance
+      elevation_chart:
+        current: Current
+        maximum: "Max (%{value})"
+        minimum: "Min (%{value})"
+        title: 📊 Solar Elevation Throughout the Year
+      hero:
+        azimuth: Azimuth
+        current_altitude: Current Altitude
+        day_length: Day Length
+        distance: Distance
+        light_travel: Light Travel
+        solar_noon: Solar Noon
+        to_earth: to Earth
+        vs_yesterday: vs yesterday
+      photography:
+        blue_hour: Blue Hour
+        evening: Evening
+        golden_hour: Golden Hour
+        morning: Morning
+        title: 📸 Photography
+      practical_info:
+        current_optimal_tilt: Current optimal tilt
+        equation_of_time: Equation of Time
+        shadow_length: Shadow Length
+        shadow_length_factor: Shadow length factor
+        solar_panel_angle: Solar Panel Angle
+        sun_is_set_shadow: Sun is set, no shadow
+        sun_is_set_tilt: Sun is set, no solar energy
+        title: 🛠️ Practical Info
+      seasons:
+        next: Next
+        title: 🍂 Seasons
+      show:
+        title: Sun
+      sky_position:
+        absolute_magnitude: Absolute Magnitude
+        angular_diameter: Angular Diameter
+        apparent_magnitude: Apparent Magnitude
+        astrological_sign: Astrological Sign
+        current_constellation: Current Constellation
+        sub_solar_point: Sub-Solar Point
+        title: 🌌 Sky Position
+      today:
+        solar_noon: Solar Noon
+        sunrise: Sunrise
+        sunset: Sunset
+        title: Today's Sun
+      twilight:
+        astronomical: Astronomical
+        civil: Civil
+        evening: Evening
+        morning: Morning
+        nautical: Nautical
+        title: 🌆 Twilight
     privacy_policy:
       title: Privacy Policy
       last_updated: "Last updated: 2025-09-01"
@@ -352,6 +617,9 @@ en:
       arcminute:
         name: Arcminute
         symbol: ′
+      arcsecond:
+        name: Arcsecond
+        symbol: ″
       astronomical_unit:
         name: Astronomical Unit
         symbol: "\u00A0AU"
@@ -370,6 +638,16 @@ en:
       m_per_second_squared:
         name: Meter per second squared
         symbol: "\u00A0m/s²"
+      duration:
+        hour:
+          name: Hour
+          symbol: h
+        minute:
+          name: Minute
+          symbol: m
+        second:
+          name: Second
+          symbol: s
   date:
     formats:
       abbreviated_day: "%a"

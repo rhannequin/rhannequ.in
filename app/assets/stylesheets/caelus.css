@@ -1,5 +1,4 @@
 :root {
-  /* Light Mode - Cosmic Day Theme */
   --background: 220 30% 96%;
   --foreground: 220 30% 8%;
   --card: 220 15% 98%;
@@ -22,7 +21,6 @@
 }
 
 .dark {
-  /* Dark Mode - Cosmic Night Theme */
   --background: 220 27% 8%;
   --foreground: 220 15% 95%;
   --card: 220 20% 12%;
@@ -203,11 +201,6 @@ h1, h2, h3 {
   filter: drop-shadow(0 0 8px hsl(var(--accent) / 0.3));
 }
 
-.event-item {
-  border-left: 2px solid hsl(var(--accent) / 0.5);
-  padding: 0.5rem 0.5rem 0.5rem 1rem;
-}
-
 .moon-calendar .calendar-day {
   aspect-ratio: 1;
   padding: 0.25rem;
@@ -250,4 +243,169 @@ h1, h2, h3 {
 
 .dark .moon-calendar .calendar-day.today {
   background: hsl(var(--primary) / 0.15);
+}
+
+.sun-hero-container {
+  position: relative;
+  display: inline-block;
+}
+
+.sun-hero-container::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  border-radius: 50%;
+  background: radial-gradient(
+      circle,
+      rgba(253, 184, 19, 0.3),
+      rgba(255, 160, 0, 0.1),
+      transparent 70%
+  );
+  z-index: -1;
+  animation: sunPulse 3s ease-in-out infinite;
+}
+
+@keyframes sunPulse {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(0.95);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.1);
+  }
+}
+
+.sun-rays {
+  animation: sunRotate 60s linear infinite;
+  transform-origin: center;
+}
+
+@keyframes sunRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.sun-stat-card {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background: linear-gradient(
+    135deg,
+    hsl(var(--card) / 0.5),
+    hsl(var(--card) / 0.3)
+  );
+  border: 1px solid hsl(var(--border) / 0.3);
+  backdrop-filter: blur(8px);
+}
+
+.sun-time-row {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid hsl(var(--border) / 0.2);
+}
+
+.sun-time-row:last-child {
+  border-bottom: none;
+}
+
+.twilight-section {
+  position: relative;
+}
+
+.photo-time-block {
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  background: hsl(var(--background) / 0.3);
+}
+
+.photo-time-card {
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  background: hsl(var(--card) / 0.3);
+  border: 1px solid hsl(var(--border) / 0.2);
+}
+
+.coordinate-group {
+  position: relative;
+}
+
+.season-item {
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  background: hsl(var(--background) / 0.3);
+  border: 1px solid hsl(var(--border) / 0.2);
+}
+
+.season-item.current {
+  background: hsl(var(--primary) / 0.05);
+  border-color: hsl(var(--primary) / 0.3);
+}
+
+.practical-item {
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  background: hsl(var(--background) / 0.2);
+}
+
+.elevation-chart {
+  padding: 1rem;
+  background: hsl(var(--background) / 0.2);
+  border-radius: 0.5rem;
+}
+
+.dark .sun-stat-card {
+  background: linear-gradient(
+    135deg,
+    hsl(var(--card) / 0.3),
+    hsl(var(--card) / 0.2)
+  );
+}
+
+.dark .photo-time-card {
+  background: hsl(var(--card) / 0.2);
+}
+
+.dark .season-item {
+  background: hsl(var(--card) / 0.2);
+}
+
+.dark .season-item.current {
+  background: hsl(var(--primary) / 0.08);
+}
+
+.dark .practical-item {
+  background: hsl(var(--card) / 0.15);
+}
+
+@media (max-width: 768px) {
+  .sun-hero-container svg {
+    width: 140px;
+    height: 140px;
+  }
+
+  .sun-stat-card {
+    padding: 0.75rem;
+  }
+
+  .elevation-chart svg {
+    height: 150px;
+  }
+}
+
+@keyframes dataUpdate {
+  0% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.7;
+  }
 }

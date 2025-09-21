@@ -26,13 +26,13 @@ module Caelus
       delegate :angular_diameter,
         :apparent,
         :astrometric,
-        :constellation,
         :approaching_primary?,
         to: :planet
 
       def distance_from_earth
-        @distance_from_earth ||= (planet.geometric.position - current_earth_geometric.position)
-          .magnitude
+        @distance_from_earth ||=
+          (planet.geometric.position - current_earth_geometric.position)
+            .magnitude
       end
 
       def magnitude
@@ -61,6 +61,10 @@ module Caelus
 
       def topocentric
         @topocentric ||= planet.observed_by(@observer)
+      end
+
+      def constellation
+        @constellation ||= Constellation.from_astronoby(planet.constellation)
       end
 
       private
