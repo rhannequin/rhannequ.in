@@ -43,7 +43,7 @@
           <%= format_number(
             moon.angular_diameter.degrees * 60,
             unit: :arcminute,
-            precision: 1
+            precision: 2
           ) %>
         </div>
         <div class="text-xs text-muted-foreground">
@@ -58,7 +58,7 @@
           <%= moon.constellation.name %>
         </div>
         <div class="text-xs text-muted-foreground">
-          <%= moon.constellation.abbreviation %>
+          <%= moon.constellation.abbreviation.capitalize %>
         </div>
       </div>
       <div class="moon-stat-card">
@@ -74,11 +74,11 @@
         </div>
         <% if moon.topocentric.horizontal.altitude.positive? %>
           <div class="text-xs text-green-500">
-            <%= t ".altitude.positive" %>
+            <%= t "caelus.shared.altitude.positive" %>
           </div>
         <% else %>
           <div class="text-xs text-red-700">
-            <%= t ".altitude.negative" %>
+            <%= t "caelus.shared.altitude.negative" %>
           </div>
         <% end %>
       </div>

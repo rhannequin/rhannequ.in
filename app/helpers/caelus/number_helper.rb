@@ -4,6 +4,7 @@ module Caelus
   module NumberHelper
     SUPPORTED_UNITS = {
       arcminute: "arcminute",
+      arcsecond: "arcsecond",
       au: "astronomical_unit",
       day: "day",
       degree: "degree",
