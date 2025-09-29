@@ -21,7 +21,6 @@ proxy:
   ssl: true
   hosts:
     - <%= ENV["REMOTE_DOMAIN"] %>
-    - caelus.<%= ENV["REMOTE_DOMAIN"] %>
 
 # Credentials for your image host.
 registry:
