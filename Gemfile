@@ -38,10 +38,6 @@ gem "importmap-rails"
 gem "stimulus-rails"
 gem "tailwindcss-rails"
 gem "turbo-rails"
-gem "view_component"
-
-# Caelus specific
-gem "astronoby", github: "rhannequin/astronoby", branch: "apoapsis-periapsis"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
