@@ -19,3 +19,39 @@ jobs:
 
       - name: Check nginx config
         run: docker run --rm rhannequ_in nginx -t
+
+  deploy:
+    needs: build
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    runs-on: ubuntu-latest
+    concurrency:
+      group: deploy
+      cancel-in-progress: false
+    env:
+      SERVICE_NAME: rhannequ_in
+      DOCKER_USERNAME: rhannequin
+      REMOTE_SERVER_IP: 151.80.149.113
+      REMOTE_SERVER_USER: ubuntu
+      REMOTE_DOMAIN: rhannequ.in
+      KAMAL_REGISTRY_PASSWORD: ${{ secrets.KAMAL_REGISTRY_PASSWORD }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.4"
+
+      - name: Install Kamal
+        run: gem install kamal -v 2.11.0
+
+      - uses: webfactory/ssh-agent@v0.9.1
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: Add server to known_hosts
+        run: |
+          mkdir -p ~/.ssh && chmod 700 ~/.ssh
+          ssh-keyscan -H "$REMOTE_SERVER_IP" >> ~/.ssh/known_hosts
+
+      - name: Deploy
+        run: kamal deploy

@@ -16,7 +16,7 @@ bin/dev
 
 Then open http://localhost:8000. Pass a port to override: `bin/dev 4000`.
 
-## Deployment
+## Manual deploy
 
 Requires Kamal installed locally (`gem install kamal`) and Docker running.
 
