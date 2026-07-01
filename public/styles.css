@@ -104,7 +104,6 @@ a:focus-visible {
 }
 
 .intro p {
-  max-width: 42rem;
   font-size: 1.25rem;
   color: var(--color-text-soft);
   margin-bottom: var(--space-4);
@@ -158,12 +157,17 @@ a:focus-visible {
 }
 
 .card h3 a {
-  color: inherit;
-  text-decoration: none;
+  color: var(--color-link);
+  text-decoration: underline;
+}
+
+.card h3 a:visited {
+  color: var(--color-link-visited);
 }
 
 .card h3 a:hover {
   color: var(--color-link-hover);
+  text-decoration: none;
 }
 
 .icon {

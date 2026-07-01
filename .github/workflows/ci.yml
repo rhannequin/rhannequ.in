@@ -1,0 +1,21 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate HTML
+        run: npx --yes html-validate public/*.html
+
+      - name: Build image
+        run: docker build -t rhannequ_in .
+
+      - name: Check nginx config
+        run: docker run --rm rhannequ_in nginx -t

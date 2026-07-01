@@ -4,7 +4,17 @@ Source for [rhannequ.in].
 
 ## Content
 
-Edit `index.html` and `styles.css`.
+Edit `public/index.html` and `public/styles.css`.
+
+## Preview locally
+
+Serve the `public/` directory:
+
+```
+bin/dev
+```
+
+Then open http://localhost:8000. Pass a port to override: `bin/dev 4000`.
 
 ## Deployment
 
