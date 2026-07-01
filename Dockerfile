@@ -6,7 +6,7 @@
 #   docker build -t rhannequ_in .
 #   docker run -d -p 80:80 --name rhannequ_in rhannequ_in
 
-FROM nginx:1.27-alpine
+FROM nginx:1.31-alpine
 
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
