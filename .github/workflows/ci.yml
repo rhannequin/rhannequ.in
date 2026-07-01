@@ -51,7 +51,7 @@ jobs:
       - name: Add server to known_hosts
         run: |
           mkdir -p ~/.ssh && chmod 700 ~/.ssh
-          ssh-keyscan -H "$REMOTE_SERVER_IP" >> ~/.ssh/known_hosts
+          ssh-keyscan -t ed25519 "$REMOTE_SERVER_IP" >> ~/.ssh/known_hosts
 
       - name: Deploy
         run: kamal deploy
