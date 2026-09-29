@@ -16,6 +16,8 @@ registry:
   password:
     - KAMAL_REGISTRY_PASSWORD
 
+retain_containers: 2
+
 builder:
   arch: amd64
 <% unless ENV["CI"] %>
